@@ -30,12 +30,7 @@ let alternatingClasstwo = 'three'; // Initialize the alternating class
 sectionNames.forEach(sectionName => {
     if (sectionName !== "Home") {
     const sectionClassName = sectionName.replace(/\s+/g, '-').toLowerCase();
-    const cssRule = `
-        .${sectionClassName} {
-            background-color: ${getRandomColor()};
-        }
-    `;
-    styleSheet.insertRule(cssRule, styleSheet.cssRules.length);
+    
 
     
 
@@ -76,8 +71,6 @@ sectionNames.forEach(sectionName => {
     for (let i = 1; i <= 6; i++) {
         const gridItem = document.createElement('div');
         gridItem.classList.add('grid-item'); 
-        gridItem.style.backgroundColor = getRandomColor(); 
-        gridItem.style.border = getRandomColor(); 
         gridItem.style.borderWidth = '2px';
         gridItem.style.borderStyle = 'solid';
 
@@ -115,16 +108,6 @@ function setBackgroundImage(sectionElement, sectionName) {
     const imageName = sectionName.toLowerCase().replace(/\s+/g, '-');
     const imageUrl = `images/${imageName}.jpg`; // Adjust the path to your images folder
     sectionElement.style.backgroundImage = `url('${imageUrl}')`;
-}
-
-// Random Color-------------------------------------------------------------------------
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
 }
 
 //Side Menu-------------------------------------------------------------------------------------

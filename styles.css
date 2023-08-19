@@ -6,7 +6,8 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
+  background-color: white;
+  }
 *{
     margin: 0;
     padding: 0;
@@ -21,9 +22,10 @@ body {
   Nav Bar ----------------------------------------------------------------------------------------
   */
    .NAV {
-    position: fixed;
+    position: absolute;
     z-index: 2;
     width: 100%;
+    border-bottom: 4px solid #bebebe;
   }
    .logo {
     text-align: center;
@@ -42,7 +44,7 @@ body {
     padding-top: 10px;
     font-size: 18px;
     text-transform: uppercase;
-    color: white;
+    color: #4079e4;
   }
    header a {
     text-decoration: none;
@@ -50,7 +52,7 @@ body {
    header {
     z-index: 5;
     padding: 0 20px;
-    background: linear-gradient(to bottom, #2553a8, #3469ca, #4079e4);
+    background: white;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -66,18 +68,21 @@ body {
   }
    ul {
     list-style: none;
-    height: 100%;
+    height: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-right: 15px;
-    margin-top: -4px;
-    padding-bottom: 35px;
-    padding-top: 25px;
+    margin-top: 5px;
+    padding-bottom: 25px;
+    padding: 5px 20px 20px 10px;
+    background-color: #4079e4;
+    border-radius: 40%;
   }
    ul a {
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 18px;
     font-weight: bold;
   }
@@ -163,6 +168,7 @@ Search Bar ---------------------------------------------------------------------
 }
  .search_wrap{
   margin-top: 10px;
+  border: 2px solid #4079e4;
 }
  .search_wrap .search_box{
 	position: relative;
@@ -186,7 +192,7 @@ Search Bar ---------------------------------------------------------------------
 	background: #b3b3b3;
 	z-index: 1;
 	cursor: pointer;
-  border-left: 2px solid #2553A8FF;
+  border-left: 2px solid #4079e4;
 }
  .search_wrap .search_box .btn:hover{
 	background: #888888;	
@@ -197,7 +203,7 @@ Search Bar ---------------------------------------------------------------------
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	color: #2553A8FF;
+	color: #4079e4;
 	font-size: 20px;
 }
 /*
@@ -279,22 +285,49 @@ Search Bar ---------------------------------------------------------------------
     opacity: 100%;
 }
 .Home{
-  width: 100vw;
+    width: 99vw;
     height: 100vh;
     scroll-snap-align: start;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: top;
+    justify-content: left;
     font-size: 24px;
-    color: white;
+    color: #a64ac9;
     opacity: 100;
     transition: opacity 1s ease;
     position: relative;
-    background-color: black;
-    background-image: url('Images/Home.jpg');
-    background-repeat: no-repeat;
-    background-size: 50% 100%;
-    background-position: right;
+    border: 4px solid #bebebe;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+  .box{
+    background-color: rgb(23, 233, 224, 0.4);
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    right: 15%;
+    top: 20%;
+    font-size: 100px;
+  }
+  .box h1{
+    color: #a64ac9;
+    position: absolute;
+    text-align: center;
+    left: 26%;
+    line-height: 200px;
+    opacity: 150%;
+  }
+.Home h1{
+  font-size: 120px;
+  padding-left: 5%;
+  padding-top: 190px;
+}
+.Home h2{
+  font-size: 150px;
+  margin-top: 285px;
+  margin-left: -337px;
+  color: #a64ac9;
 }
 .section {
     width: 100vw;
