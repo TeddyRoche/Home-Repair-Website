@@ -1,0 +1,332 @@
+html {
+    scroll-behavior: smooth;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {
+    height: 100%;
+    background: #dfe9f5;
+    margin: 0;
+    padding: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/*
+  Nav Bar ----------------------------------------------------------------------------------------
+  */
+   .NAV {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+  }
+   .logo {
+    text-align: center;
+    display: flex;
+    padding-top: 10px;
+
+  }
+   .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 15%;
+  }
+   .logo span {
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+  }
+   header a {
+    text-decoration: none;
+  }
+   header {
+    z-index: 5;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, #2553a8, #3469ca, #4079e4);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #brand {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  #brand a {
+    color: #09c372;
+  }
+   ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 15px;
+    margin-top: -4px;
+    padding-bottom: 35px;
+    padding-top: 25px;
+  }
+   ul a {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+  }
+   ul p {
+    font-size: 12px;
+    font-weight: lighter;
+    margin-top: -5px;
+  }
+   ul li {
+    padding: 1px;
+    margin-left: 10px;
+  }
+   ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+   .dropdown {
+    position: relative;
+    margin-top: 15px;
+    display: inline-block; /* Keep the dropdown as an inline block */
+  }
+  .dropdown.open .dropdown-content {
+    display: block;
+}
+  
+   .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: -100px;
+    width: 200px;
+    background-color: #4079e4;
+    padding: 10px;
+    display: none;
+  }
+  
+   .dropdown-content form {
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+   .dropdown-content input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+   .dropdown-content .options {
+    text-align: center;
+    margin-top: -10px;
+  }
+   .dropdown-content .options a {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+   .dropdown-content .options a:hover {
+    color: #30bd53;
+  }
+   .dropdown-content .options .separator {
+    color: #fff;
+    margin: 0 5px;
+  }
+   .logo{
+    z-index: 2;
+  }
+   .logo:hover{
+    transform: scale(1.05);
+  }
+  /*
+    Nav Bar ----------------------------------------------------------------------------------------
+    */
+/*
+Search Bar ----------------------------------------------------------------------------------------
+*/
+
+ .Search-Bar .input{
+	border: 0;
+	outline: none;
+	color: #8b7d77;
+}
+ .search_wrap{
+  margin-top: 10px;
+}
+ .search_wrap .search_box{
+	position: relative;
+	width: 700px;
+	height: 40px;  
+}
+ .search_wrap .search_box .input{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px;
+	font-size: 18px;
+}
+ .search_wrap .search_box .btn{
+	position: absolute;
+	top: 0;
+    right: 0%;
+	width: 60px;
+	height: 100%;
+	background: #b3b3b3;
+	z-index: 1;
+	cursor: pointer;
+  border-left: 2px solid #2553A8FF;
+}
+ .search_wrap .search_box .btn:hover{
+	background: #888888;	
+}
+
+ .search_wrap .search_box .btn.btn_common .fas{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #2553A8FF;
+	font-size: 20px;
+}
+/*
+Search Bar ----------------------------------------------------------------------------------------
+*/
+
+
+.scroll-buttons {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.scroll-button {
+    position: relative;
+    background-color: #007bff;
+    color: transparent;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: width 0.3s, padding 0.3s;
+    overflow: hidden;
+    text-decoration: none;
+    width: 20px; /* Initial width for circle */
+    height: 15px; /* Initial height for circle */
+    opacity: 50%;
+}
+
+.scroll-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #007bff;
+    border-radius: 50%;
+    transition: width 1s;
+}
+
+.scroll-button:hover::before {
+    width: 0;
+}
+
+.scroll-buttons:hover .scroll-button{
+    background-color: transparent;
+    color: white;
+    padding-right: 30px; /* Padding for the text to appear */
+    width: auto; /* Allow the button to expand for text */
+    text-align: left; /* Align the text to the left */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 10px; /* Adjust line height for proper spacing */
+    opacity: 80%;
+    padding: 15px 20px;
+
+
+}
+.scroll-buttons:hover{
+    background-color: gray;
+    opacity: 100%;
+    width: 10%;
+    align-items: center;
+
+}
+.scroll-button:hover{
+    background-color: transparent;
+    color: white;
+    width: auto; 
+    top: 20%;
+    transform: scale(150%) translateX(0%) translateY(-15%);
+    font-weight: bolder;
+    text-align: center;
+    opacity: 100%;
+}
+.section {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    opacity: 100;
+    transition: opacity 1s ease;
+    position: relative;
+}
+.section a{
+    display: flex;
+    font-size: 75px;
+    top: -5%;
+    left: -30%;
+    background: linear-gradient(to left, transparent, #ffffff, #ccc5c2, #b8a9a2, #8b7d77, #b8a9a2, #ccc5c2, #ffffff, transparent);
+    border-radius: 25%;
+    padding: 10px 75px;
+    color: #0d2aca;
+    font-weight: bolder;
+    opacity: 100%; /* Start with hidden sections */
+    position: relative; /* Ensure relative positioning for scrolling */
+}
+
+ .grid-con {
+    position: absolute;
+      display: grid;
+      width: 700px;
+      grid-template-columns: 220px 220px 220px;
+      top: 25%;
+      left: calc( 500px + 20vw);
+      padding-top: 5px;
+      padding-bottom: 5px;
+      gap: 20px;
+      overflow: hidden;
+      justify-content: center;
+    }
+.grid-item{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 15%;
+    height: 200px;
+}
+.item{
+    text-align: center;
+    display: inline-block;
+}
