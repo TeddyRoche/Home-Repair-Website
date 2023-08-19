@@ -1,12 +1,9 @@
-
-
 //Pop-up ------------------------------------------------------------------------------------
 window.onload = function() {
     alert("Welcome! This is my Current Senior Project that is currently in Development and is not live yet. Please feel free to look around, but dont expect a finished project. Thank You!!");
 };
-//Pop-up ------------------------------------------------------------------------------------
 
-
+//Account Dropdown---------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
     var dropdown = document.querySelector(".dropdown");
     var dropdownContent = document.querySelector(".dropdown-content");
@@ -16,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
+//Lists-------------------------------------------------------------------------------------
 const sectionNames = [
     "Home", "Kitchen", "Living Room", "Office", 
     "Attic", "Bathroom", "Dinning Room", 
@@ -26,9 +23,12 @@ const imageFormats = ['jpg', 'jpeg', 'png', 'gif']; // Add more formats if neede
 
 const styleSheet = document.styleSheets[0]; // Get the first stylesheet
 const sectionsContainer = document.querySelector('.sections');
+let alternatingClass = 'one'; // Initialize the alternating class
+let alternatingClasstwo = 'three'; // Initialize the alternating class
 
-
+//Background Color------------------------------------------------------------------------
 sectionNames.forEach(sectionName => {
+    if (sectionName !== "Home") {
     const sectionClassName = sectionName.replace(/\s+/g, '-').toLowerCase();
     const cssRule = `
         .${sectionClassName} {
@@ -42,8 +42,10 @@ sectionNames.forEach(sectionName => {
     const sectionDiv = document.createElement('div');
     sectionDiv.classList.add(sectionClassName);
     sectionDiv.classList.add('section'); // Add a class to the section
+    sectionDiv.classList.add(alternatingClass);
     sectionDiv.id = sectionName.toLowerCase().replace(/\s+/g, '-');
 
+    //Background Image---------------------------------------------------------------------
     let sectionImageFormat = null;
     for (const format of imageFormats) {
         const imageUrl = `images/${sectionClassName}.${format}`;
@@ -53,10 +55,6 @@ sectionNames.forEach(sectionName => {
             sectionImageFormat = format;
             const sectionImageUrl = `images/${sectionClassName}.${sectionImageFormat}`;
             sectionDiv.style.backgroundImage = `url(${sectionImageUrl})`;
-            sectionDiv.style.backgroundSize = 'cover'; // This makes the image cover the entire element
-            sectionDiv.style.backgroundRepeat = 'no-repeat';
-            sectionDiv.style.backgroundPosition = 'center';
-            sectionDiv.style.opacity = '70%';
         };
     }
 
@@ -64,9 +62,17 @@ sectionNames.forEach(sectionName => {
     sectionLink.href = `#${sectionDiv.id}`;
     sectionLink.textContent = sectionName;
 
+    // Add alternating classes "1" and "2"
+    sectionLink.classList.add(alternatingClass);
+    alternatingClass = alternatingClass === 'one' ? 'two' : 'one'; // Toggle the class
+
     const sectionGrid = document.createElement('section');
     sectionGrid.classList.add('grid-con');
+    sectionGrid.classList.add(alternatingClasstwo);
+    alternatingClasstwo = alternatingClasstwo === 'three' ? 'four' : 'three'; // Toggle the class
 
+
+    // Creates the Grid----------------------------------------------------------------------
     for (let i = 1; i <= 6; i++) {
         const gridItem = document.createElement('div');
         gridItem.classList.add('grid-item'); 
@@ -75,6 +81,7 @@ sectionNames.forEach(sectionName => {
         gridItem.style.borderWidth = '2px';
         gridItem.style.borderStyle = 'solid';
 
+        //Grid Images--------------------------------------------------------------------
         let backgroundImageUrl;
         for (const format of imageFormats) {
         const imageUrl = `images/${sectionClassName}-${i}.${format}`;
@@ -100,15 +107,17 @@ sectionNames.forEach(sectionName => {
     sectionDiv.appendChild(sectionLink);
     sectionDiv.appendChild(sectionGrid);
     sectionsContainer.appendChild(sectionDiv);
+    }
 });
 
+//Background Image-------------------------------------------------------------------------
 function setBackgroundImage(sectionElement, sectionName) {
     const imageName = sectionName.toLowerCase().replace(/\s+/g, '-');
     const imageUrl = `images/${imageName}.jpg`; // Adjust the path to your images folder
     sectionElement.style.backgroundImage = `url('${imageUrl}')`;
 }
 
-// Function to generate a random color
+// Random Color-------------------------------------------------------------------------
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -118,6 +127,7 @@ function getRandomColor() {
     return color;
 }
 
+//Side Menu-------------------------------------------------------------------------------------
 const scrollButtonsContainer = document.querySelector('.scroll-buttons');
 
         sectionNames.forEach(sectionName => {
@@ -128,7 +138,8 @@ const scrollButtonsContainer = document.querySelector('.scroll-buttons');
             scrollButtonsContainer.appendChild(scrollButton);
         });
 
-// Scroll wheel snapping behavior
+
+//Scroll Wheel Snap----------------------------------------------------------------------------
 let currentIndex = 0;
 let isScrolling = false;
 
