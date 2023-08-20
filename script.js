@@ -1,7 +1,7 @@
 //Pop-up ------------------------------------------------------------------------------------
-window.onload = function() {
-    alert("Welcome! This is my Current Senior Project that is currently in Development and is not live yet. Please feel free to look around, but dont expect a finished project. Thank You!!");
-};
+//window.onload = function() {
+//    alert("Welcome! This is my Current Senior Project that is currently in Development and is not live yet. Please feel free to look around, but dont expect a finished project. Thank You!!");
+//};
 
 //Account Dropdown---------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //Lists-------------------------------------------------------------------------------------
 const sectionNames = [
     "Home", "Kitchen", "Living Room", "Office", 
-    "Attic", "Bathroom", "Dinning Room", 
+    "Attic", "Bathroom", "Dining Room", 
     "Bedroom", "Basement", "Laundry Room", "About"
 ];
 
@@ -85,11 +85,14 @@ sectionNames.forEach(sectionName => {
     sectionGrid.classList.add('grid-con');
     
     // Creates the Grid----------------------------------------------------------------------
-    for (let i = 1; i <= 6; i++) {
-        const gridItem = document.createElement('div');
-        gridItem.classList.add('grid-item'); 
-        gridItem.style.borderWidth = '2px';
-        gridItem.style.borderStyle = 'solid';
+    
+    // Creates the Grid----------------------------------------------------------------------
+for (let i = 1; i <= (sectionName === 'Laundry Room' ? 3 : 6); i++) {
+    const gridItem = document.createElement('div');
+    gridItem.classList.add('grid-item');
+    gridItem.style.borderWidth = '2px';
+    gridItem.style.borderStyle = 'solid';
+
 
         //Grid Images--------------------------------------------------------------------
         let backgroundImageUrl;

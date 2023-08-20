@@ -394,6 +394,9 @@ Search Bar ---------------------------------------------------------------------
     border-radius: 50%;
     height: 250px;
 }
+.laundry-room .grid-con{
+  top: 35%;
+}
 .item{
     text-align: center;
     display: inline-block;
