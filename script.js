@@ -7,9 +7,26 @@ window.onload = function() {
 document.addEventListener("DOMContentLoaded", function() {
     var dropdown = document.querySelector(".dropdown");
     var dropdownContent = document.querySelector(".dropdown-content");
+    var usernameInput = document.querySelector("#username");
+    var passwordInput = document.querySelector("#password");
     
-    dropdown.addEventListener("click", function() {
-        dropdown.classList.toggle("open");
+    dropdown.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent the click from reaching the document
+
+        // Check if the dropdown is not open, and then open it
+        if (!dropdown.classList.contains("open")) {
+            dropdown.classList.add("open");
+        }
+    });
+
+    document.addEventListener("click", function (event) {
+        // Check if the clicked element is NOT within the dropdown
+        if (!dropdown.contains(event.target) && dropdown.classList.contains("open")) {
+            dropdown.classList.remove("open"); // Close the dropdown
+
+            usernameInput.value = "";
+            passwordInput.value = "";
+        }
     });
 });
 
@@ -108,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Deactivate all other sections (except "Home")
     sectionElements.forEach(function (section) {
         if (section !== kitchenSection && section.id !== 'home') {
-            section.style.display = 'none';
+            section.classList.add('hidden-section');
         }
     });
 });
@@ -158,12 +175,50 @@ document.querySelectorAll('.scroll-button').forEach((link, index) => {
 
         sectionElements.forEach(function (section, i) {
             if (i === currentIndex || section.id === 'home') {
-                section.style.display = 'block';
+                section.classList.remove('hidden-section');
+                section.classList.add('active-section');
             } else {
-                section.style.display = 'none';
+                section.classList.add('hidden-section');
+                section.classList.remove('active-section');
             }
         });
     });
 });
+
+//Banner Button------------------------------------------------------------------------------
+const sliderLinks = document.querySelectorAll('.slider-link');
+
+sliderLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+        const target = event.target.dataset.target;
+        const targetElement = document.getElementById(target);
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+});
+//Banner Button------------------------------------------------------------------------------
+
+//Banner-------------------------------------------------------------------------------------
+     // Get the slider element
+const slider = document.querySelector('.slider');
+// Get the total number of slides
+const totalSlides = slider.children.length;
+// Set the current slide index
+let currentSlide = 0;
+
+// Function to scroll to the next slide
+function scrollToNextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  const slideWidth = slider.offsetWidth;
+  slider.scroll({
+    left: slideWidth * currentSlide,
+    behavior: 'smooth'
+  });
+}
+
+// Set an interval to scroll to the next slide every 15 seconds
+setInterval(scrollToNextSlide, 15000);
+//Banner-------------------------------------------------------------------------------------
+
 
 
