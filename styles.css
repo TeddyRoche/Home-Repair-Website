@@ -211,8 +211,8 @@ Search Bar ---------------------------------------------------------------------
 
 
 .scroll-buttons {
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 150%;
     right: 20px;
     transform: translateY(-50%);
     display: flex;
@@ -321,44 +321,22 @@ Search Bar ---------------------------------------------------------------------
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 50px;
     color: white;
     opacity: 100;
     transition: opacity 1s ease;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: 60% 100%;
+    background-position: 100%;
 }
-.two{
-  background-repeat: no-repeat;
-  background-size: 60% 100%;
-  background-position: 100%;
+.section a{
+  position: absolute;
+  color: blue;
+  left: 5%;
+  top: 40%;
+  font-size: 100px;
 }
-.one{
-  background-repeat: no-repeat;
-  background-size: 60% 100%;
-  background-position: 0%;
-}
-.section .one{
-    display: flex;
-    font-size: 75px;
-    top: -5%;
-    right: -30%;
-    color: #0d2aca;
-    font-weight: bolder;
-    opacity: 100%; /* Start with hidden sections */
-    position: relative; /* Ensure relative positioning for scrolling */
-
-}
-.section .two{
-  display: flex;
-  font-size: 75px;
-  top: -5%;
-  left: -30%;
-  color: #0d2aca;
-  font-weight: bolder;
-  opacity: 100%; /* Start with hidden sections */
-  position: relative; /* Ensure relative positioning for scrolling */
-}
-
 
  .grid-con  {
       position: absolute;
@@ -371,13 +349,8 @@ Search Bar ---------------------------------------------------------------------
       gap: 30px;
       overflow: hidden;
       justify-content: center;
-    }
-    .four{
       right: 5%;
     }
-.three{
-  left: 5%;
-}
     
 .grid-item{
     display: flex;
@@ -389,4 +362,8 @@ Search Bar ---------------------------------------------------------------------
 .item{
     text-align: center;
     display: inline-block;
+}
+
+ .active-section {
+  display: block; /* Show the active section */
 }

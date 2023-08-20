@@ -19,12 +19,13 @@ const sectionNames = [
     "Attic", "Bathroom", "Dinning Room", 
     "Bedroom", "Basement", "Laundry Room"
 ];
+
+
 const imageFormats = ['jpg', 'jpeg', 'png', 'gif']; // Add more formats if needed
 
 const styleSheet = document.styleSheets[0]; // Get the first stylesheet
 const sectionsContainer = document.querySelector('.sections');
-let alternatingClass = 'one'; // Initialize the alternating class
-let alternatingClasstwo = 'three'; // Initialize the alternating class
+
 
 //Background Color------------------------------------------------------------------------
 sectionNames.forEach(sectionName => {
@@ -37,7 +38,6 @@ sectionNames.forEach(sectionName => {
     const sectionDiv = document.createElement('div');
     sectionDiv.classList.add(sectionClassName);
     sectionDiv.classList.add('section'); // Add a class to the section
-    sectionDiv.classList.add(alternatingClass);
     sectionDiv.id = sectionName.toLowerCase().replace(/\s+/g, '-');
 
     //Background Image---------------------------------------------------------------------
@@ -57,16 +57,9 @@ sectionNames.forEach(sectionName => {
     sectionLink.href = `#${sectionDiv.id}`;
     sectionLink.textContent = sectionName;
 
-    // Add alternating classes "1" and "2"
-    sectionLink.classList.add(alternatingClass);
-    alternatingClass = alternatingClass === 'one' ? 'two' : 'one'; // Toggle the class
-
     const sectionGrid = document.createElement('section');
     sectionGrid.classList.add('grid-con');
-    sectionGrid.classList.add(alternatingClasstwo);
-    alternatingClasstwo = alternatingClasstwo === 'three' ? 'four' : 'three'; // Toggle the class
-
-
+    
     // Creates the Grid----------------------------------------------------------------------
     for (let i = 1; i <= 6; i++) {
         const gridItem = document.createElement('div');
@@ -103,6 +96,23 @@ sectionNames.forEach(sectionName => {
     }
 });
 
+// Get all section elements
+const sectionElements = document.querySelectorAll('.section');
+
+// Set the "Kitchen" section as active when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    // Activate the "Kitchen" section
+    const kitchenSection = document.getElementById('kitchen');
+    kitchenSection.classList.add('active-section');
+
+    // Deactivate all other sections (except "Home")
+    sectionElements.forEach(function (section) {
+        if (section !== kitchenSection && section.id !== 'home') {
+            section.style.display = 'none';
+        }
+    });
+});
+
 //Background Image-------------------------------------------------------------------------
 function setBackgroundImage(sectionElement, sectionName) {
     const imageName = sectionName.toLowerCase().replace(/\s+/g, '-');
@@ -113,55 +123,47 @@ function setBackgroundImage(sectionElement, sectionName) {
 //Side Menu-------------------------------------------------------------------------------------
 const scrollButtonsContainer = document.querySelector('.scroll-buttons');
 
-        sectionNames.forEach(sectionName => {
-            const scrollButton = document.createElement('a');
-            scrollButton.classList.add('scroll-button');
-            scrollButton.href = `#${sectionName.toLowerCase().replace(/ /g, '-')}`;
-            scrollButton.textContent = sectionName;
-            scrollButtonsContainer.appendChild(scrollButton);
-        });
+sectionNames.forEach((sectionName, index) => {
+    // Skip the first item (index 0), which is "Home"
+    if (index === 0) {
+        return;
+    }
+
+    const scrollButton = document.createElement('a');
+    scrollButton.classList.add('scroll-button');
+    scrollButton.href = `#${sectionName.toLowerCase().replace(/ /g, '-')}`;
+    scrollButton.textContent = sectionName;
+    scrollButtonsContainer.appendChild(scrollButton);
+});
 
 
 //Scroll Wheel Snap----------------------------------------------------------------------------
 let currentIndex = 0;
-let isScrolling = false;
 
 function scrollToSection(index) {
     const targetSection = document.querySelector('.section');
     if (targetSection) {
         const offsetTop = targetSection.clientHeight * index;
-        isScrolling = true;
-        window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-        });
+        
     }
 }
 
 document.querySelectorAll('.scroll-button').forEach((link, index) => {
     link.addEventListener('click', event => {
         event.preventDefault();
+
         currentIndex = index; // Update currentIndex on link click
+
         scrollToSection(currentIndex);
+
+        sectionElements.forEach(function (section, i) {
+            if (i === currentIndex || section.id === 'home') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
     });
-});
-
-window.addEventListener('wheel', event => {
-    if (!isScrolling) {
-        if (event.deltaY > 0) {
-            currentIndex = Math.min(currentIndex + 1, sectionNames.length - 1);
-        } else {
-            currentIndex = Math.max(currentIndex - 1, 0);
-        }
-
-        scrollToSection(currentIndex);
-
-        event.preventDefault();
-    }
-});
-
-window.addEventListener('scroll', () => {
-    isScrolling = false;
 });
 
 
