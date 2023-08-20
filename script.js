@@ -12,16 +12,21 @@ document.addEventListener("DOMContentLoaded", function() {
     
     dropdown.addEventListener("click", function (event) {
         event.stopPropagation(); // Prevent the click from reaching the document
+        event.preventDefault(); // Prevent the default behavior (scrolling)
 
         // Check if the dropdown is not open, and then open it
         if (!dropdown.classList.contains("open")) {
             dropdown.classList.add("open");
         }
+        
     });
 
-    document.addEventListener("click", function (event) {
+    document.addEventListener("click", function(event) {
         // Check if the clicked element is NOT within the dropdown
         if (!dropdown.contains(event.target) && dropdown.classList.contains("open")) {
+            event.preventDefault(); // Prevent the default behavior (scrolling)
+            event.stopPropagation(); // Prevent the click from reaching the document
+
             dropdown.classList.remove("open"); // Close the dropdown
 
             usernameInput.value = "";
