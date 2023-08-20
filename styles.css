@@ -5,7 +5,6 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: white;
   }
 *{
     margin: 0;
@@ -21,7 +20,7 @@ body {
   Nav Bar ----------------------------------------------------------------------------------------
   */
    .NAV {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     width: 100%;
     border-bottom: 4px solid #bebebe;
@@ -210,9 +209,8 @@ Search Bar ---------------------------------------------------------------------
 */
 .scroll-buttons {
     position: absolute;
-    top: 150%;
-    right: 20px;
-    transform: translateY(-50%);
+    top: 125%;
+    right: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -225,58 +223,39 @@ Search Bar ---------------------------------------------------------------------
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    margin-bottom: 10px;
     transition: width 0.3s, padding 0.3s;
     overflow: hidden;
     text-decoration: none;
     width: 20px; /* Initial width for circle */
-    height: 15px; /* Initial height for circle */
+    height: 50px; /* Initial height for circle */
     opacity: 50%;
 }
 
-.scroll-button::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -15px;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: #007bff;
-    border-radius: 50%;
-    transition: width 1s;
-}
 
-.scroll-button:hover::before {
-    width: 0;
-}
-
-.scroll-buttons:hover .scroll-button{
+.scroll-buttons .scroll-button{
     background-color: transparent;
-    color: white;
+    color: blue;
     padding-right: 30px; /* Padding for the text to appear */
     width: auto; /* Allow the button to expand for text */
     text-align: left; /* Align the text to the left */
     font-size: 16px; /* Adjust font size as needed */
     line-height: 10px; /* Adjust line height for proper spacing */
-    opacity: 80%;
+    opacity: 1;
     padding: 15px 20px;
 
 
 }
-.scroll-buttons:hover{
-    background-color: gray;
-    opacity: 100%;
+.scroll-buttons{
+    background-color:rgba(190, 190, 190, 0.8);
     width: 10%;
     align-items: center;
-
 }
 .scroll-button:hover{
     background-color: transparent;
     color: white;
     width: auto; 
     top: 20%;
-    transform: scale(150%) translateX(0%) translateY(-15%);
+    transform: scale(150%) translateX(0%) translateY(0%);
     font-weight: bolder;
     text-align: center;
     opacity: 100%;
@@ -291,14 +270,12 @@ Search Bar ---------------------------------------------------------------------
     justify-content: left;
     font-size: 24px;
     color: white;
-    opacity: 100;
-    transition: opacity 1s ease;
     position: relative;
     border: 4px solid #bebebe;
+    border-bottom: none;
     padding-top: 70px;
     left: 10px;
     right: 10px;
-    bottom: 10px;
   }
 
 .Home h1{
@@ -312,22 +289,79 @@ Search Bar ---------------------------------------------------------------------
   margin-left: -307px;
   color: #fccd04;
 }
-.section {
-    width: 100vw;
+.sections{
+  scroll-snap-align: start;
+}
+
+.About{
+    top: 200%;  
+    width: 99vw;
     height: 100vh;
     scroll-snap-align: start;
+    color: white;
+    background: linear-gradient(158deg, #f5e6cc, #17e9e0, #a64ac9, #17e9e0, #f5e6cc);
+    align-items: top;
+    position: absolute;
+    border: 4px solid #bebebe;
+    padding-top: 70px;
+    left: 10px;
+    right: 10px;
+    margin-bottom: 10px;
+}
+.About h1{
+  font-size: 120px;
+  padding-left: 5%;
+  padding-top: 150px;
+}
+.section {
+    width: 99vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 50px;
-    color: white;
+    top: 100%;
+    z-index: -2;
+    color: blue;
     opacity: 100;
     opacity: 0;
     transition: opacity 0.5s ease;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: 60% 100%;
+    background-size: 0;
     background-position: 100%;
+    border: 4px solid #bebebe;
+    left: 10px;   
+    border-bottom: none;
+  }
+  .background-colors{
+    position: absolute;
+    background: linear-gradient(158deg, #f5e6cc, #17e9e0, #a64ac9, #17e9e0, #f5e6cc);
+    width: 99vw;
+    height: 100vh;
+    left: 10px;
+    z-index: -5;
+  }
+  .white{
+    position: absolute;
+    background-color: white;
+    width: 59.3%;
+    height: 100vh;
+    right: 10px;
+    z-index: -3;
+  }
+  .section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* Inherit the background image from the section */
+    background-repeat: no-repeat;
+    opacity: 0.7; /* Set the desired opacity */
+    z-index: -1; /* Place the pseudo-element behind the content */
+    background-position: 100%;
+    background-size: 60% 100%;
+
 }
 .section a{
   position: absolute;
@@ -349,7 +383,8 @@ Search Bar ---------------------------------------------------------------------
       gap: 30px;
       overflow: hidden;
       justify-content: center;
-      right: 5%;
+      right: 10%;
+      opacity: 1;
     }
     
 .grid-item{

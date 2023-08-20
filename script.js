@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const sectionNames = [
     "Home", "Kitchen", "Living Room", "Office", 
     "Attic", "Bathroom", "Dinning Room", 
-    "Bedroom", "Basement", "Laundry Room"
+    "Bedroom", "Basement", "Laundry Room", "About"
 ];
 
 
@@ -46,7 +46,7 @@ const sectionsContainer = document.querySelector('.sections');
 
 //Background Color------------------------------------------------------------------------
 sectionNames.forEach(sectionName => {
-    if (sectionName !== "Home") {
+    if (sectionName !== "Home" && sectionName !== "About") {
     const sectionClassName = sectionName.replace(/\s+/g, '-').toLowerCase();
     
 
@@ -61,12 +61,14 @@ sectionNames.forEach(sectionName => {
     let sectionImageFormat = null;
     for (const format of imageFormats) {
         const imageUrl = `images/${sectionClassName}.${format}`;
+
         const img = new Image();
         img.src = imageUrl;
         img.onload = () => {
             sectionImageFormat = format;
             const sectionImageUrl = `images/${sectionClassName}.${sectionImageFormat}`;
             sectionDiv.style.backgroundImage = `url(${sectionImageUrl})`;
+
         };
     }
 
@@ -124,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Deactivate all other sections (except "Home")
     sectionElements.forEach(function (section) {
-        if (section !== kitchenSection && section.id !== 'home') {
+        if (section !== kitchenSection && section.id !== 'home' && section.id !== 'about') {
             section.classList.add('hidden-section');
         }
     });
@@ -134,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function setBackgroundImage(sectionElement, sectionName) {
     const imageName = sectionName.toLowerCase().replace(/\s+/g, '-');
     const imageUrl = `images/${imageName}.jpg`; // Adjust the path to your images folder
+    
     sectionElement.style.backgroundImage = `url('${imageUrl}')`;
 }
 
@@ -142,7 +145,7 @@ const scrollButtonsContainer = document.querySelector('.scroll-buttons');
 
 sectionNames.forEach((sectionName, index) => {
     // Skip the first item (index 0), which is "Home"
-    if (index === 0) {
+    if (index === 0 || index === sectionNames.length -1) {
         return;
     }
 
@@ -174,7 +177,7 @@ document.querySelectorAll('.scroll-button').forEach((link, index) => {
         scrollToSection(currentIndex);
 
         sectionElements.forEach(function (section, i) {
-            if (i === currentIndex || section.id === 'home') {
+            if (i === currentIndex || section.id === 'home' || section.id === 'about') {
                 section.classList.remove('hidden-section');
                 section.classList.add('active-section');
             } else {
@@ -220,5 +223,36 @@ function scrollToNextSlide() {
 setInterval(scrollToNextSlide, 15000);
 //Banner-------------------------------------------------------------------------------------
 
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = ['home-sec', 'sections-sec', 'about-sec'];
+    let wheelIndex = 0;
+    let isScrolling = false;
+
+    function scrollToSection(index) {
+        const targetSection = document.getElementById(sections[index]);
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    window.addEventListener('wheel', function(event) {
+        if (!isScrolling) {
+            if (event.deltaY > 0) {
+                wheelIndex = Math.min(wheelIndex + 1, sections.length - 1);
+            } else {
+                wheelIndex = Math.max(wheelIndex - 1, 0);
+            }
+
+            scrollToSection(wheelIndex);
+
+            event.preventDefault();
+            isScrolling = true;
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 0); // Adjust the duration as needed
+        }
+    });
+    // Scroll to the initial section (Home)
+    scrollToSection(wheelIndex);
+});
 
 
