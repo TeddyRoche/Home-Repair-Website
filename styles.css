@@ -4,7 +4,7 @@ html {
 body {
     height: 100%;
     margin: 0;
-    background-color: #fff;
+    background-color: #557a95;
     padding: 0;
   }
 *{
@@ -412,6 +412,25 @@ Search Bar ---------------------------------------------------------------------
     border-radius: 50%;
     height: 250px;
     cursor: pointer;
+}
+
+.grid-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* Remove the underline on links */
+  top: 0%;
+  left: 0%;
+  height: 100%; /* Ensure the link takes the full height of the grid item */
+  width: 100%; /* Ensure the link takes the full width of the grid item */
+  border-radius: 50%; /* Preserve the circular shape */
+  cursor: pointer;
+  position: relative; /* Add relative positioning to handle z-index */
+  z-index: 1; /* Ensure links are clickable over other content */
+  background-color: red; /* Remove any background color */
+  overflow: hidden; /* Clip any overflowing content */
+  color: inherit; /* Inherit text color from parent */
+  
 }
 .item{
     text-align: center;

@@ -77,7 +77,6 @@ sectionNames.forEach(sectionName => {
     const sectionGrid = document.createElement('section');
     sectionGrid.classList.add('grid-con');
     
-    // Creates the Grid----------------------------------------------------------------------
     
     // Creates the Grid----------------------------------------------------------------------
 for (let i = 1; i <= (sectionName === 'Laundry Room' ? 3 : 6); i++) {
@@ -86,9 +85,7 @@ for (let i = 1; i <= (sectionName === 'Laundry Room' ? 3 : 6); i++) {
     gridItem.style.borderWidth = '2px';
     gridItem.style.borderStyle = 'solid';
 
-    gridItem.addEventListener('click', () => {
-        createAndNavigateToHTMLPage(sectionName, i);
-    });
+
     
         //Grid Images--------------------------------------------------------------------
         let backgroundImageUrl;
@@ -108,8 +105,14 @@ for (let i = 1; i <= (sectionName === 'Laundry Room' ? 3 : 6); i++) {
         const spanItem = document.createElement('span');
         spanItem.classList.add('item');
         spanItem.classList.add(`${sectionClassName}-${i}`);
-        spanItem.textContent = i;
-        gridItem.appendChild(spanItem);
+        
+
+        const link = document.createElement('a');
+        link.href = `Page.html?item=${i}`;
+        link.appendChild(spanItem);
+    
+        // Append the link to the grid item
+        gridItem.appendChild(link);
         sectionGrid.appendChild(gridItem);
     }
 

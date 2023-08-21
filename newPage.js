@@ -1,39 +1,46 @@
-const gridItemDestinations = {
-    electric: ['electric1.html', 'electric2.html', 'electric3.html', 'electric4.html', 'electric5.html', 'electric6.html'],
-    plumbing: ['plumbing1.html', 'plumbing2.html', 'plumbing3.html', 'plumbing4.html', 'plumbing5.html', 'plumbing6.html'],
-    walls: ['walls1.html', 'walls2.html', 'walls3.html', 'walls4.html', 'walls5.html', 'walls6.html'],
-    'floor-&-ceiling': ['floor-&-ceiling1.html', 'floor-&-ceiling2.html', 'floor-&-ceiling3.html', 'floor-&-ceiling4.html', 'floor-&-ceiling5.html', 'floor-&-ceiling6.html'],
-    'heat-&-ac': ['heat-&-ac1.html', 'heat-&-ac2.html', 'heat-&-ac3.html', 'heat-&-ac4.html', 'heat-&-ac5.html', 'heat-&-ac6.html'],
+const contentMap = {
 
 };
 
-function createAndNavigateToHTMLPage(sectionName, itemNumber) {
-    const content = `
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>${sectionName} Item ${itemNumber}</title>
-        </head>
-        <body>
-            <h1>${sectionName} Item ${itemNumber}</h1>
-            <!-- Add your content here -->
-        </body>
-        </html>
-    `;
+// Define a function to load content based on the item number
+async function loadContent() {
+    // Get the item number from the query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemNumber = urlParams.get('item');
 
-    // Create a Blob from the HTML content
-    const blob = new Blob([content], { type: 'text/html' });
+    // Define a function to load content from a file
+    async function loadContentFromFile(filePath) {
+        try {
+            const response = await fetch(filePath);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const content = await response.text();
+            return content;
+        } catch (error) {
+            console.error('Error loading content:', error);
+            return null;
+        }
+    }
 
-    // Generate a URL for the Blob
-    const url = URL.createObjectURL(blob);
+    // Example usage: Load content from a text file
+    const contentFilePath = 'Page-Layout.txt'; // Replace with the actual path to your text file
 
-    // Create an anchor link to navigate to the new page
-    const link = document.createElement('a');
-    link.href = url;
+    // Load content from the file
+    const fileContent = await loadContentFromFile(contentFilePath);
 
-    // Trigger a click event to navigate to the new page
-    link.click();
+    // Get the element where you want to display the content
+    const contentElement = document.getElementById('content');
 
-    // Revoke the URL to free up resources (optional)
-    URL.revokeObjectURL(url);
+    // Set the content based on the itemNumber or use the file content
+    if (itemNumber && contentMap[itemNumber]) {
+        contentElement.innerHTML = contentMap[itemNumber];
+    } else if (fileContent) {
+        contentElement.innerHTML = fileContent;
+    } else {
+        contentElement.innerHTML = 'Item not found';
+    }
 }
+
+// Call the loadContent function when the page loads
+window.onload = loadContent;
