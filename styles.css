@@ -4,6 +4,7 @@ html {
 body {
     height: 100%;
     margin: 0;
+    background-color: #fff;
     padding: 0;
   }
 *{
@@ -23,7 +24,6 @@ body {
     position: fixed;
     z-index: 2;
     width: 100%;
-    border-bottom: 4px solid #bebebe;
   }
    .logo {
     text-align: center;
@@ -38,11 +38,11 @@ body {
   }
    .logo span {
     font-weight: bold;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-top: 10px;
     font-size: 18px;
     text-transform: uppercase;
-    color: #4079e4;
+    color: white;
   }
    header a {
     text-decoration: none;
@@ -50,7 +50,7 @@ body {
    header {
     z-index: 5;
     padding: 0 20px;
-    background: white;
+    background: transparent;
     height: 65px;
     display: flex;
     justify-content: space-between;
@@ -70,50 +70,64 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-right: 15px;
     margin-top: 5px;
     padding-bottom: 25px;
     padding: 5px 20px 20px 10px;
-    background-color: #4079e4;
     border-radius: 40%;
+  }
+  .links-nav{
+    margin-top: 15px;
+    padding-top: 5px;
+    font-size: 20px;
+    padding-right: 35px;
+    padding-left: 30px;
+    border-right: 1px solid white;
   }
    ul a {
     text-align: center;
-    color: white;
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
   }
    ul p {
-    font-size: 12px;
-    font-weight: lighter;
+    font-size: 16px;
+    font-weight: bolder;
     margin-top: -5px;
   }
    ul li {
     padding: 1px;
     margin-left: 10px;
   }
-   ul li:hover {
-    transform: scale(1.1);
+   ul a:hover {
+      color: #30bd53;
     transition: 0.3s;
   }
    .dropdown {
     position: relative;
     margin-top: 15px;
     display: inline-block; /* Keep the dropdown as an inline block */
+    padding-left: 30px;
   }
   .dropdown.open .dropdown-content {
     display: block;
   }
-  
+
    .dropdown-content {
     position: absolute;
-    top: 100%;
-    left: -100px;
+    top: 137%;
+    left: -75px;
     width: 200px;
-    background-color: #4079e4;
+    background-color: #fff;
+    border: 1px solid #557a95;
+    border-radius: 10px;
+    border-top: none;
     padding: 10px;
     display: none;
+  }
+  .dropdown-content:hover{
+    transform: none;
   }
   
    .dropdown-content form {
@@ -125,6 +139,7 @@ body {
     width: 100%;
     padding: 5px;
     margin-bottom: 5px;
+    border: 1px solid #557a95;
   }
    .dropdown-content .options {
     text-align: center;
@@ -133,7 +148,7 @@ body {
    .dropdown-content .options a {
     display: inline-block;
     margin-bottom: 10px;
-    color: #fff;
+    color: #557a95;
     font-size: 12px;
     text-decoration: underline;
     cursor: pointer;
@@ -143,7 +158,7 @@ body {
     color: #30bd53;
   }
    .dropdown-content .options .separator {
-    color: #fff;
+    color: #557a95;
     margin: 0 5px;
   }
    .logo{
@@ -166,7 +181,7 @@ Search Bar ---------------------------------------------------------------------
 }
  .search_wrap{
   margin-top: 10px;
-  border: 2px solid #4079e4;
+  border: 2px solid #557a95;
 }
  .search_wrap .search_box{
 	position: relative;
@@ -176,6 +191,7 @@ Search Bar ---------------------------------------------------------------------
  .search_wrap .search_box .input{
 	position: absolute;
 	top: 0;
+  color: black;
 	width: 100%;
 	height: 100%;
 	padding: 10px 20px;
@@ -190,7 +206,7 @@ Search Bar ---------------------------------------------------------------------
 	background: #b3b3b3;
 	z-index: 1;
 	cursor: pointer;
-  border-left: 2px solid #4079e4;
+  border-left: 2px solid #557a95;
 }
  .search_wrap .search_box .btn:hover{
 	background: #888888;	
@@ -201,7 +217,7 @@ Search Bar ---------------------------------------------------------------------
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	color: #4079e4;
+	color: #557a95;
 	font-size: 20px;
 }
 /*
@@ -209,8 +225,8 @@ Search Bar ---------------------------------------------------------------------
 */
 .scroll-buttons {
     position: absolute;
-    top: 125%;
-    right: 10px;
+    top: 135%;
+    right: 12.5px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -218,7 +234,7 @@ Search Bar ---------------------------------------------------------------------
 
 .scroll-button {
     position: relative;
-    background-color: #007bff;
+    background-color: #557a95;
     color: transparent;
     border: none;
     border-radius: 50px;
@@ -234,11 +250,11 @@ Search Bar ---------------------------------------------------------------------
 
 .scroll-buttons .scroll-button{
     background-color: transparent;
-    color: blue;
+    color: #fff;
     padding-right: 30px; /* Padding for the text to appear */
     width: auto; /* Allow the button to expand for text */
     text-align: left; /* Align the text to the left */
-    font-size: 16px; /* Adjust font size as needed */
+    font-size: 20px; /* Adjust font size as needed */
     line-height: 10px; /* Adjust line height for proper spacing */
     opacity: 1;
     padding: 15px 20px;
@@ -246,13 +262,14 @@ Search Bar ---------------------------------------------------------------------
 
 }
 .scroll-buttons{
-    background-color:rgba(190, 190, 190, 0.8);
-    width: 10%;
+    background-color: #8b7d77;
+    border-radius: 5px;
+    width: 11%;
     align-items: center;
 }
 .scroll-button:hover{
     background-color: transparent;
-    color: white;
+    color: #fff;
     width: auto; 
     top: 20%;
     transform: scale(150%) translateX(0%) translateY(0%);
@@ -261,21 +278,27 @@ Search Bar ---------------------------------------------------------------------
     opacity: 100%;
 }
 .Home{
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     scroll-snap-align: start;
-    background: linear-gradient(158deg, #f5e6cc, #17e9e0, #a64ac9, #17e9e0, #f5e6cc);
+    background-image: url('Images/Home.jpg');
     display: flex;
     align-items: top;
     justify-content: left;
+    z-index: -2;
     font-size: 24px;
-    color: white;
+    color: #fff;
     position: relative;
-    border: 4px solid #bebebe;
     border-bottom: none;
-    padding-top: 70px;
-    left: 10px;
-    right: 10px;
+
+  }
+  .black{
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
   }
 
 .Home h1{
@@ -287,7 +310,7 @@ Search Bar ---------------------------------------------------------------------
   font-size: 150px;
   margin-top: 235px;
   margin-left: -307px;
-  color: #fccd04;
+  color: #fff;
 }
 .sections{
   scroll-snap-align: start;
@@ -295,18 +318,14 @@ Search Bar ---------------------------------------------------------------------
 
 .About{
     top: 200%;  
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     scroll-snap-align: start;
-    color: white;
-    background: linear-gradient(158deg, #f5e6cc, #17e9e0, #a64ac9, #17e9e0, #f5e6cc);
+    color: #557a95;
+    background-color: #dfdfdf;
     align-items: top;
     position: absolute;
-    border: 4px solid #bebebe;
     padding-top: 70px;
-    left: 10px;
-    right: 10px;
-    margin-bottom: 10px;
 }
 .About h1{
   font-size: 120px;
@@ -314,7 +333,7 @@ Search Bar ---------------------------------------------------------------------
   padding-top: 150px;
 }
 .section {
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -322,7 +341,7 @@ Search Bar ---------------------------------------------------------------------
     font-size: 50px;
     top: 100%;
     z-index: -2;
-    color: blue;
+    color: #fff;
     opacity: 100;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -330,25 +349,23 @@ Search Bar ---------------------------------------------------------------------
     background-repeat: no-repeat;
     background-size: 0;
     background-position: 100%;
-    border: 4px solid #bebebe;
-    left: 10px;   
-    border-bottom: none;
+
   }
   .background-colors{
     position: absolute;
-    background: linear-gradient(158deg, #f5e6cc, #17e9e0, #a64ac9, #17e9e0, #f5e6cc);
-    width: 99vw;
+    background-color: #557a95;
+    width: 100vw;
     height: 100vh;
-    left: 10px;
-    z-index: -5;
+    z-index: -4;
   }
   .white{
     position: absolute;
-    background-color: white;
-    width: 59.3%;
+    background-color: #000;
+    width: 40%;
     height: 100vh;
-    right: 10px;
+    left: 0px;
     z-index: -3;
+    opacity: 1;
   }
   .section::before {
     content: "";
@@ -357,20 +374,20 @@ Search Bar ---------------------------------------------------------------------
     height: 100%;
     background-image: inherit; /* Inherit the background image from the section */
     background-repeat: no-repeat;
-    opacity: 0.7; /* Set the desired opacity */
+    opacity: 0.5; /* Set the desired opacity */
     z-index: -1; /* Place the pseudo-element behind the content */
-    background-position: 100%;
-    background-size: 60% 100%;
+    background-position: 0%;
+    background-size: 40% 100%;
 
 }
 .section a{
   position: absolute;
-  color: blue;
+  color: #fff;
   left: 5%;
   top: 40%;
   font-size: 100px;
+  z-index: 0;
 }
-
 
  .grid-con  {
       position: absolute;
@@ -381,6 +398,7 @@ Search Bar ---------------------------------------------------------------------
       padding-top: 5px;
       padding-bottom: 5px;
       gap: 30px;
+      color: #fff;
       overflow: hidden;
       justify-content: center;
       right: 10%;
@@ -393,9 +411,7 @@ Search Bar ---------------------------------------------------------------------
     align-items: center;
     border-radius: 50%;
     height: 250px;
-}
-.laundry-room .grid-con{
-  top: 35%;
+    cursor: pointer;
 }
 .item{
     text-align: center;
@@ -410,6 +426,10 @@ Search Bar ---------------------------------------------------------------------
   pointer-events: none;
 }
 
+.grid-item span.item {
+  user-select: none; /* Make the numbers inside grid items not selectable */
+}
+
 /*
 Rotating Banner -----------------------------------------------------------------------------------
 */
@@ -422,7 +442,7 @@ Rotating Banner ----------------------------------------------------------------
   max-width: 44rem;
   margin-top: 175px;
   left: 30%;
-  border: 3px solid #2553a8;
+  border: 3px solid #557a95;
   border-radius: 0.65rem;
 }
  .slider {
@@ -455,7 +475,7 @@ display:contents;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: #2553A8FF;
+  background-color: #557a95;
   opacity: 0.75;
   transition: opacity ease 250ms;
 }
