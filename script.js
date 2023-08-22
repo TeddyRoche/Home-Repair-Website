@@ -38,8 +38,16 @@ document.addEventListener("DOMContentLoaded", function() {
 //Lists-------------------------------------------------------------------------------------
 const sectionNames = [
     "Home", "Electric", "Plumbing", "Walls", 
-    "Floor & Ceiling", "Heat & AC",  "About"
+    "Floor-&-Ceiling", "Heat-&-AC",  "About"
 ];
+const GridPages = {
+    Electric: [1, 2, 3, 4, 5, 6],
+    Plumbing: [1, 2, 3, 4, 5],
+    Walls: [1, 2, 5],
+    'Floor-&-Ceiling': [1, 2],
+    'Heat-&-AC': [1, 2, 3, 4, 5, 6],
+
+};
 
 const imageFormats = ['jpg', 'jpeg', 'png', 'gif', 'webp']; // Add more formats if needed
 
@@ -76,46 +84,56 @@ sectionNames.forEach(sectionName => {
     sectionLink.textContent = sectionName;
     const sectionGrid = document.createElement('section');
     sectionGrid.classList.add('grid-con');
-    
-    
+    console.log(GridPages[sectionName]);
     // Creates the Grid----------------------------------------------------------------------
-for (let i = 1; i <= (sectionName === 'Laundry Room' ? 3 : 6); i++) {
-    const gridItem = document.createElement('div');
-    gridItem.classList.add('grid-item');
-    gridItem.style.borderWidth = '2px';
-    gridItem.style.borderStyle = 'solid';
+    if (GridPages.hasOwnProperty(sectionName)) {
 
-
+        for (const i of GridPages[sectionName]) {
+            const gridItem = document.createElement('div');
+            gridItem.classList.add('grid-item');
+            gridItem.style.borderWidth = '2px';
+            gridItem.style.borderStyle = 'solid';
+            
+            const gridCon = document.querySelector('.grid-con');
+            function adjustGridLayout(){
+                const gridConHeight = gridCon.clientHeight;
     
-        //Grid Images--------------------------------------------------------------------
-        let backgroundImageUrl;
-        for (const format of imageFormats) {
-        const imageUrl = `images/${sectionClassName}-${i}.${format}`;
-        const img = new Image();
-        img.src = imageUrl;
-        img.onload = () => {
-            backgroundImageUrl = imageUrl;
-            gridItem.style.backgroundImage = `url(${backgroundImageUrl})`;
-            gridItem.style.backgroundSize = 'cover'; // This makes the image cover the entire element
-            gridItem.style.backgroundRepeat = 'no-repeat';
-            gridItem.style.backgroundPosition = 'center';
-        };
+                if (gridConHeight <= 260) {
+                    // Change the layout for a height of 200px or less
+                    gridCon.style.top = '35%';
+                } else{
+                    // Change the layout for a height between 200px and 400px
+                    gridCon.style.top = '20%';
+                } 
+            }
+            // Grid Images
+            let backgroundImageUrl;
+            for (const format of imageFormats) {
+                const imageUrl = `images/${sectionName}-${i}.${format}`;
+                const img = new Image();
+                img.src = imageUrl;
+                img.onload = () => {
+                    backgroundImageUrl = imageUrl;
+                    gridItem.style.backgroundImage = `url(${backgroundImageUrl})`;
+                    gridItem.style.backgroundSize = 'cover';
+                    gridItem.style.backgroundRepeat = 'no-repeat';
+                    gridItem.style.backgroundPosition = 'center';
+                };
+            }
+
+            const spanItem = document.createElement('span');
+            spanItem.classList.add('item');
+            spanItem.classList.add(`${sectionName}-${i}`);
+
+            const link = document.createElement('a');
+            link.href = `Page.html?item=${i}`;
+            link.appendChild(spanItem);
+
+            gridItem.appendChild(link);
+            sectionGrid.appendChild(gridItem);
+
+        }
     }
-
-        const spanItem = document.createElement('span');
-        spanItem.classList.add('item');
-        spanItem.classList.add(`${sectionClassName}-${i}`);
-        
-
-        const link = document.createElement('a');
-        link.href = `Page.html?item=${i}`;
-        link.appendChild(spanItem);
-    
-        // Append the link to the grid item
-        gridItem.appendChild(link);
-        sectionGrid.appendChild(gridItem);
-    }
-
     sectionDiv.appendChild(sectionLink);
     sectionDiv.appendChild(sectionGrid);
     sectionsContainer.appendChild(sectionDiv);
