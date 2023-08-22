@@ -1,0 +1,16 @@
+.instruction-box{
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    top: 20%;
+    right: 10%;
+    background-color: red;
+}
+.guide-img{
+    position: absolute;
+    width: 25%;
+    height: 50%;
+    top: 20%;
+    left: 20%;
+    background-color: red;
+}
