@@ -427,7 +427,6 @@ Search Bar ---------------------------------------------------------------------
   cursor: pointer;
   position: relative; /* Add relative positioning to handle z-index */
   z-index: 1; /* Ensure links are clickable over other content */
-  background-color: red; /* Remove any background color */
   overflow: hidden; /* Clip any overflowing content */
   color: inherit; /* Inherit text color from parent */
   

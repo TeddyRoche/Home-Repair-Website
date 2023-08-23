@@ -41,7 +41,7 @@ const sectionNames = [
     "Floor-&-Ceiling", "Heat-&-AC",  "About"
 ];
 const GridPages = {
-    Electric: [1, 2, 3, 4, 5, 6],
+    Electric: ['outlet', 'wire', 'fuse-box', 'lighting', 'fan'],
     Plumbing: [1, 2, 3, 4, 5],
     Walls: [1, 2, 5],
     'Floor-&-Ceiling': [1, 2],
@@ -84,32 +84,19 @@ sectionNames.forEach(sectionName => {
     sectionLink.textContent = sectionName;
     const sectionGrid = document.createElement('section');
     sectionGrid.classList.add('grid-con');
-    console.log(GridPages[sectionName]);
+    console.log(GridPages[sectionName].length);
     // Creates the Grid----------------------------------------------------------------------
     if (GridPages.hasOwnProperty(sectionName)) {
-
         for (const i of GridPages[sectionName]) {
             const gridItem = document.createElement('div');
             gridItem.classList.add('grid-item');
             gridItem.style.borderWidth = '2px';
             gridItem.style.borderStyle = 'solid';
             
-            const gridCon = document.querySelector('.grid-con');
-            function adjustGridLayout(){
-                const gridConHeight = gridCon.clientHeight;
-    
-                if (gridConHeight <= 260) {
-                    // Change the layout for a height of 200px or less
-                    gridCon.style.top = '35%';
-                } else{
-                    // Change the layout for a height between 200px and 400px
-                    gridCon.style.top = '20%';
-                } 
-            }
             // Grid Images
             let backgroundImageUrl;
             for (const format of imageFormats) {
-                const imageUrl = `images/${sectionName}-${i}.${format}`;
+                const imageUrl = `${i}/${i}.${format}`;
                 const img = new Image();
                 img.src = imageUrl;
                 img.onload = () => {
@@ -123,7 +110,7 @@ sectionNames.forEach(sectionName => {
 
             const spanItem = document.createElement('span');
             spanItem.classList.add('item');
-            spanItem.classList.add(`${sectionName}-${i}`);
+            spanItem.classList.add(`${i}`);
 
             const link = document.createElement('a');
             link.href = `Page.html?item=${i}`;
