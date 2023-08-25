@@ -1,0 +1,24 @@
+https://www.thespruce.com/how-to-fix-electrical-outlet-problems-1821525
+
+Tools:
+
+    Flat-head screwdriver
+    Phillips head screwdriver
+    Replacement outlet (15 amp, 20 amp, or GFCI)
+    Voltage tester
+    GFCI tester
+
+
+    Check whether this is a GFCI outlet. If so, press the reset button. Reset buttons are spring-loaded and can be hard to reset. Press with the tip of a flat-head screwdriver. This must be done while the circuit breaker is still on.
+    Go to the electrical service panel and see if the circuit breaker controlling the outlet has flipped off. If it has, flip the breaker in the opposite direction, then back again in the correct position.
+    Go back to the outlet and check all upstream (or line; in the direction of the circuit breakers) outlets on the same circuit between the affected outlet and the service panel. If any of these outlets are a GFCI outlet, they will affect all downstream outlets (or load; away from the circuit breakers), even if those affected outlets are not GFCI outlets. If so, reset that GFCI outlet or replace it.
+    Remove the faceplate of the outlet that is not working, after first turning off the circuit breaker on the electrical service panel.
+    Unscrew the outlet from the electrical box. Two screws (one at the top and one at the bottom) hold the outlet to the electrical box. Gently remove the outlet from the box.
+    Check that all of the wires are properly connected to the outlet and that all pigtailed wires are firmly connected under wire nuts. Bare copper or green plastic-coated wires are ground wires; they will generally not cause an outlet to stop working.
+    Rarely will conventional, non-GFCI outlets fail, but this does happen sometimes. If you believe this is the case, replace the outlet with another, similar outlet. GFCI outlets regularly fail and for no apparent reason. While GFCI outlets are considerably more expensive than non-GFCI outlets, total replacement is the only option as they cannot be opened up and fixed.
+
+
+    Unplug all cords leading to the problem outlet.
+    Remove the outlet cover, then the outlet itself.
+    Assess whether all the wire ends all firmly connected. Disconnected wires touching each other will produce sparks and flip a circuit breaker off.
+    If there is any doubt about the condition of the receptacle, simply replace it. It is easy enough to replace an outlet by yourself and will give you added peace of mind.

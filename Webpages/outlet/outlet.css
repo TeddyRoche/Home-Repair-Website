@@ -1,0 +1,92 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-color: transparent;
+    padding: 0;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Baskerville", serif;
+}
+.intro{
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    background-color: #557a95;
+    display: flex;
+    align-items: top;
+    justify-content: left;
+    font-size: 24px;
+    color: #fff;
+    position: relative;    
+}
+.intro img{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.instruction-box{
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    top: 20%;
+    right: 10%;
+    background-color: red;
+}
+.guide-img{
+    position: relative;
+    width: 700px;
+    height: 100vh;
+    background-image: url('outlet-tools.webp');
+    top: 0;
+    left: 0;
+}
+.guide-img .one{
+    background-color: black;
+    width: 700px;
+    height: 100vh;
+    opacity: 0.6;
+}
+ .intro .tool{
+    position: absolute;
+    background-size: contain;
+    width: 700px;
+    height: 450px;
+    top: 25%;
+}
+.tools{
+    position: absolute;
+    list-style-type:square;
+    list-style-position: inside;
+    left: 38%;
+    font-size: 26px;
+    top: 40%;
+}
+
+.title{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 16%;
+    left: 7%;
+    z-index: 2;
+    color: #fff;
+    font-size: 75px;
+}
+.repair-1{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #c9b2a0;
+}
+

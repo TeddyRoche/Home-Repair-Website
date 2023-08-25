@@ -96,7 +96,7 @@ sectionNames.forEach(sectionName => {
             // Grid Images
             let backgroundImageUrl;
             for (const format of imageFormats) {
-                const imageUrl = `${i}/${i}.${format}`;
+                const imageUrl = `WebPages/${i}/${i}.${format}`;
                 const img = new Image();
                 img.src = imageUrl;
                 img.onload = () => {
@@ -113,7 +113,7 @@ sectionNames.forEach(sectionName => {
             spanItem.classList.add(`${i}`);
 
             const link = document.createElement('a');
-            link.href = `Page.html?item=${i}`;
+            link.href = `WebPages/${i}/${i}.html?item=${i}`;
             link.appendChild(spanItem);
 
             gridItem.appendChild(link);

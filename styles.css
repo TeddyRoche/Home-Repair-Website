@@ -173,7 +173,10 @@ body {
 /*
 Search Bar ----------------------------------------------------------------------------------------
 */
-
+  .Search-Bar{
+    position: absolute;
+    left: 32%;
+  }
  .Search-Bar .input{
 	border: 0;
 	outline: none;
