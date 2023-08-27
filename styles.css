@@ -353,7 +353,7 @@ Search Bar ---------------------------------------------------------------------
     position: absolute;
     background-color: #557a95;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     z-index: -4;
   }
   .white{
