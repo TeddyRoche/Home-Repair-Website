@@ -391,7 +391,7 @@ Search Bar ---------------------------------------------------------------------
  .grid-con  {
       position: absolute;
       display: grid;
-      width: 100%;
+      width: 50%;
       grid-template-columns: 25% 25% 25%;
       padding-top: 5px;
       padding-bottom: 3%;
