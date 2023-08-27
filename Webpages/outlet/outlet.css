@@ -16,77 +16,329 @@ body {
     box-sizing: border-box;
     font-family: "Baskerville", serif;
 }
-.intro{
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
-    background-color: #557a95;
-    display: flex;
-    align-items: top;
-    justify-content: left;
-    font-size: 24px;
-    color: #fff;
-    position: relative;    
-}
-.intro img{
+/*
+  Nav Bar ----------------------------------------------------------------------------------------
+  */
+  .NAV {
+    position: fixed;
+    z-index: 2;
     width: 100%;
+  }
+   .logo {
+    text-align: center;
+    display: flex;
+    padding-top: 10px;
+
+  }
+   .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 15%;
+  }
+   .logo span {
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+  }
+   header a {
+    text-decoration: none;
+  }
+   header {
+    z-index: 5;
+    padding: 0 20px;
+    background: transparent;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #brand {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  #brand a {
+    color: #09c372;
+  }
+   ul {
+    list-style: none;
+    height: 80%;
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-
-
-.instruction-box{
-    position: absolute;
-    width: 40vw;
-    height: auto;
-    top: 20%;
-    right: 10%;
-    background-color: red;
-}
-.guide-img{
+    margin-right: 15px;
+    margin-top: 5px;
+    padding-bottom: 25px;
+    padding: 5px 20px 20px 10px;
+    border-radius: 40%;
+  }
+  .links-nav{
+    margin-top: 15px;
+    padding-top: 5px;
+    font-size: 20px;
+    padding-right: 35px;
+    padding-left: 30px;
+    border-right: 1px solid white;
+  }
+   ul a {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+  }
+   ul p {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: -5px;
+  }
+   ul li {
+    padding: 1px;
+    margin-left: 10px;
+  }
+   ul a:hover {
+      color: #30bd53;
+    transition: 0.3s;
+  }
+   .dropdown {
     position: relative;
-    width: 700px;
-    height: 100vh;
-    background-image: url('outlet-tools.webp');
-    top: 0;
-    left: 0;
-}
-.guide-img .one{
-    background-color: black;
-    width: 700px;
-    height: 100vh;
-    opacity: 0.6;
-}
- .intro .tool{
+    margin-top: 15px;
+    display: inline-block; /* Keep the dropdown as an inline block */
+    padding-left: 30px;
+  }
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+   .dropdown-content {
     position: absolute;
-    background-size: contain;
-    width: 700px;
-    height: 450px;
-    top: 25%;
+    top: 137%;
+    left: -75px;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #557a95;
+    border-radius: 10px;
+    border-top: none;
+    padding: 10px;
+    display: none;
+  }
+  .dropdown-content:hover{
+    transform: none;
+  }
+  
+   .dropdown-content form {
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+   .dropdown-content input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #557a95;
+  }
+   .dropdown-content .options {
+    text-align: center;
+    margin-top: -10px;
+  }
+   .dropdown-content .options a {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #557a95;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+   .dropdown-content .options a:hover {
+    color: #30bd53;
+  }
+   .dropdown-content .options .separator {
+    color: #557a95;
+    margin: 0 5px;
+  }
+   .logo{
+    z-index: 2;
+  }
+   .logo:hover{
+    transform: scale(1.05);
+  }
+  /*
+    Nav Bar ----------------------------------------------------------------------------------------
+    */
+/*
+Search Bar ----------------------------------------------------------------------------------------
+*/
+  .Search-Bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ .Search-Bar .input{
+	border: 0;
+	outline: none;
+	color: #8b7d77;
 }
-.tools{
-    position: absolute;
-    list-style-type:square;
-    list-style-position: inside;
-    left: 38%;
-    font-size: 26px;
-    top: 40%;
+ .search_wrap{
+  margin-top: 10px;
+  border: 2px solid #557a95;
 }
+ .search_wrap .search_box{
+	position: relative;
+	width: 700px;
+	height: 40px;  
+}
+ .search_wrap .search_box .input{
+	position: absolute;
+	top: 0;
+  color: black;
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px;
+	font-size: 18px;
+}
+ .search_wrap .search_box .btn{
+	position: absolute;
+	top: 0;
+    right: 0%;
+	width: 60px;
+	height: 100%;
+	background: #b3b3b3;
+	z-index: 1;
+	cursor: pointer;
+  border-left: 2px solid #557a95;
+}
+ .search_wrap .search_box .btn:hover{
+	background: #888888;	
+}
+
+ .search_wrap .search_box .btn.btn_common .fas{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #557a95;
+	font-size: 20px;
+}
+/*
+Search Bar ----------------------------------------------------------------------------------------
+*/
 
 .title{
-    position: absolute;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 65px;
+    font-size: 75px;
+    z-index: 5;
+}
+.intro-para{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 25px;
+    top: 50px;
+    font-size: 25px;
+    line-height: 1.5;
+}
+.title-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 250px); /* Adjust the number of columns as needed */
+    justify-content: center;
+    align-items: center;
+    gap: 125px;
+    top: 60px;
+    position: relative;
+    text-align: center;
+}
+.image-grid-1{
+    display: grid;
+    grid-template-columns: repeat(4, 250px); /* Adjust the number of columns as needed */
+    gap: 125px; /* Adjust the gap between images */
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+    position: relative;
+}
+
+/* Style the individual image elements */
+.image-grid-1 img {
+    max-width: 100%;
+    height: auto;
+}
+.outlet-desc-1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 300px);
+    gap: 75px;
+    top: 65px;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+
+}
+.image-grid-2{
+    display: grid;
+    grid-template-columns: repeat(1, 350px); /* Adjust the number of columns as needed */
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    position: relative;
+}
+
+/* Style the individual image elements */
+.image-grid-2 img {
+    max-width: 100%;
+    height: auto;
+}
+.outlet-desc-2{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 350px);
+    top: 100px;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+}
+.image-grid-3{
+    display: grid;
+    grid-template-columns: repeat(2, 350px); /* Adjust the number of columns as needed */
+    gap: 425px; /* Adjust the gap between images */
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    position: relative;
+}
+
+/* Style the individual image elements */
+.image-grid-3 img {
+    max-width: 100%;
+    height: auto;
+}
+.intro{
     width: auto;
     height: auto;
-    top: 16%;
-    left: 7%;
-    z-index: 2;
-    color: #fff;
-    font-size: 75px;
+    font-size: 24px;
 }
-.repair-1{
-    width: 100vw;
-    height: 100vh;
+.outlet-desc-3{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 350px);
+    gap: 50px;
+    top: 100px;
     position: relative;
-    background-color: #c9b2a0;
+    text-align: center;
+    font-size: 20px;
 }
+
+
+
 
