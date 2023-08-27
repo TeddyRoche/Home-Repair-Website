@@ -350,8 +350,6 @@ Search Bar ---------------------------------------------------------------------
     text-align: center;
     opacity: 100%;
     overflow-x: hidden;
-
-
 }
 .Home{
     width: 100vw;
@@ -723,7 +721,32 @@ Rotating Banner ----------------------------------------------------------------
   overflow-x: hidden;
 }
 .scroll-buttons{
-  
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: 33% 33% 33%;
+  width: 95vw;
+  left: 3%;
+  gap: 0px;
+  padding: 0;
+  margin: 0;
+padding-bottom: 5px;
+}
+
+
+.scroll-button{
+  position: relative;
+  text-align: center;
+  width: 1500px;
+  height: 50px;
+  left: 5px;
+  margin: 0;
+}
+.scroll-button:hover{
+top: 0;
+font-weight: normal;
+left: 0;
+text-align: left;
 }
   .section a{
     top: 5px;
