@@ -356,6 +356,9 @@ Search Bar ---------------------------------------------------------------------
     height: 100vh;
     scroll-snap-align: start;
     background-image: url('Images/Home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: top;
     justify-content: center;
