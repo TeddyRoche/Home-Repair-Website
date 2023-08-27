@@ -7,6 +7,7 @@ body {
     margin: 0;
     background-color: #557a95;
     padding: 0;
+    z-index: -3;
   }
 *{
     margin: 0;
