@@ -54,6 +54,8 @@ body {
   }
    header a {
     text-decoration: none;
+    overflow-x: hidden;
+
   }
    header {
     z-index: 5;
