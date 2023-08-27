@@ -16,9 +16,6 @@ body {
     box-sizing: border-box;
     font-family: "Baskerville", serif;
 }
-.small{
-  display: none;
-}
 
 /*
   Nav Bar ----------------------------------------------------------------------------------------
@@ -463,7 +460,7 @@ Rotating Banner ----------------------------------------------------------------
 */
  .container{
   padding: 0rem;
-  width: 100vw;
+  width: 95vw;
 }
  .slider-wrapper {
   position: relative;
@@ -552,22 +549,18 @@ Rotating Banner ----------------------------------------------------------------
     position: relative;
     width: auto;
     height: auto;
-    left: calc(62% - 510px);
-    padding-top: 160px;
+    left: calc(40% - 100px);
   }
-  .Home{
-    display: block;
+  .Home h2{
+    position: relative;
+    width: auto;
+    height: auto;
+    left: calc(40% - 150px);
   }
   .container{
-    position: relative;
-    top: -15%;
-    left: -60px;
-  }
-  .big{
-    display: none;
-  }
-  .small{
-    display: block;
+    position: absolute;
+    left: 0;
+    top: 30%;
   }
   
 }
@@ -594,6 +587,7 @@ Rotating Banner ----------------------------------------------------------------
   }
   .dropdown{
     border-right: transparent;
+    z-index: 5;
   }
 
   .buttons{
@@ -604,7 +598,9 @@ Rotating Banner ----------------------------------------------------------------
     left: calc(50% - 80px);
     position: absolute;
   }
+
 }
+
 
 @media screen and (max-width: 650px) {
   .buttons{
@@ -641,6 +637,5 @@ Rotating Banner ----------------------------------------------------------------
     left: calc(62% - 155px);
     position: absolute;
   }
-
 
 }
