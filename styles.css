@@ -509,7 +509,7 @@ Rotating Banner ----------------------------------------------------------------
 @media screen and (max-width: 1835px) 
 {
 .grid-con{
-  grid-template-columns: 250px 250px;
+  grid-template-columns: 25% 25% 25%;
 
 }
 
