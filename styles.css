@@ -519,5 +519,12 @@ Rotating Banner ----------------------------------------------------------------
     align-items: center;
     
   }
+  .buttons{
+    display: flex;
+    position: absolute;
+    justify-content: right;
+    align-items: right;
+    top: 0%;
+  }
   
 }
