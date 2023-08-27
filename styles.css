@@ -517,6 +517,7 @@ Rotating Banner ----------------------------------------------------------------
     justify-content: center;
     align-items: center;
     text-align: center;
+    left: -300px;
   }
   .buttons{
     position: relative;
