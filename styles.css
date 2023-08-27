@@ -403,7 +403,7 @@ Search Bar ---------------------------------------------------------------------
       color: #fff;
       overflow: hidden;
       justify-content: center;
-      right: calc(32% - 400px);
+      left: calc(50% - 200px);
       opacity: 1;
     }
     
