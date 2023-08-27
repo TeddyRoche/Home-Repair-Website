@@ -26,17 +26,21 @@ body {
     position: fixed;
     z-index: 2;
     width: 100%;
+    overflow-x: hidden;
   }
    .logo {
     text-align: center;
     display: flex;
     padding-top: 10px;
+    overflow-x: hidden;
 
   }
    .logo img {
     width: 40px;
     height: 40px;
     border-radius: 15%;
+    overflow-x: hidden;
+
   }
    .logo span {
     font-weight: bold;
@@ -45,6 +49,8 @@ body {
     font-size: 18px;
     text-transform: uppercase;
     color: white;
+    overflow-x: hidden;
+
   }
    header a {
     text-decoration: none;
@@ -56,15 +62,21 @@ body {
     height: 65px;
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
+
   }
   #brand {
     font-weight: bold;
     font-size: 18px;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
+
   }
   #brand a {
     color: #09c372;
+    overflow-x: hidden;
+
   }
    ul {
     list-style: none;
@@ -78,6 +90,8 @@ body {
     padding-bottom: 25px;
     padding: 5px 20px 20px 10px;
     border-radius: 40%;
+    overflow-x: hidden;
+
   }
   .links-nav{
     margin-top: 15px;
@@ -86,34 +100,48 @@ body {
     padding-right: 35px;
     padding-left: 30px;
     border-right: 1px solid white;
+    overflow-x: hidden;
+
   }
    ul a {
     text-align: center;
     color: #fff;
     font-size: 18px;
     font-weight: bold;
+    overflow-x: hidden;
+
   }
    ul p {
     font-size: 16px;
     font-weight: bolder;
     margin-top: -5px;
+    overflow-x: hidden;
+
   }
    ul li {
     padding: 1px;
     margin-left: 10px;
+    overflow-x: hidden;
+
   }
    ul a:hover {
       color: #30bd53;
     transition: 0.3s;
+    overflow-x: hidden;
+
   }
    .dropdown {
     position: relative;
     margin-top: 15px;
     display: inline-block; /* Keep the dropdown as an inline block */
     padding-left: 30px;
+    overflow-x: hidden;
+
   }
   .dropdown.open .dropdown-content {
     display: block;
+    overflow-x: hidden;
+
   }
 
    .dropdown-content {
@@ -127,14 +155,20 @@ body {
     border-top: none;
     padding: 10px;
     display: none;
+    overflow-x: hidden;
+
   }
   .dropdown-content:hover{
     transform: none;
+    overflow-x: hidden;
+
   }
   
    .dropdown-content form {
     padding-top: 10px;
     margin-bottom: 10px;
+    overflow-x: hidden;
+
   }
   
    .dropdown-content input {
@@ -142,10 +176,14 @@ body {
     padding: 5px;
     margin-bottom: 5px;
     border: 1px solid #557a95;
+    overflow-x: hidden;
+
   }
    .dropdown-content .options {
     text-align: center;
     margin-top: -10px;
+    overflow-x: hidden;
+
   }
    .dropdown-content .options a {
     display: inline-block;
@@ -155,19 +193,29 @@ body {
     text-decoration: underline;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
+    overflow-x: hidden;
+
   }
    .dropdown-content .options a:hover {
     color: #30bd53;
+    overflow-x: hidden;
+
   }
    .dropdown-content .options .separator {
     color: #557a95;
     margin: 0 5px;
+    overflow-x: hidden;
+
   }
    .logo{
     z-index: 2;
+    overflow-x: hidden;
+
   }
    .logo:hover{
     transform: scale(1.05);
+    overflow-x: hidden;
+
   }
   /*
     Nav Bar ----------------------------------------------------------------------------------------
@@ -178,20 +226,28 @@ Search Bar ---------------------------------------------------------------------
   .Search-Bar{
     position: absolute;
     left: calc(95% - 1200px);
+    overflow-x: hidden;
+
   }
  .Search-Bar .input{
 	border: 0;
 	outline: none;
 	color: #8b7d77;
+  overflow-x: hidden;
+
 }
  .search_wrap{
   margin-top: 10px;
   border: 2px solid #557a95;
+  overflow-x: hidden;
+
 }
  .search_wrap .search_box{
 	position: relative;
 	width: 700px;
 	height: 40px;  
+  overflow-x: hidden;
+
 }
  .search_wrap .search_box .input{
 	position: absolute;
@@ -201,6 +257,8 @@ Search Bar ---------------------------------------------------------------------
 	height: 100%;
 	padding: 10px 20px;
 	font-size: 18px;
+  overflow-x: hidden;
+
 }
  .search_wrap .search_box .btn{
 	position: absolute;
@@ -212,9 +270,13 @@ Search Bar ---------------------------------------------------------------------
 	z-index: 1;
 	cursor: pointer;
   border-left: 2px solid #557a95;
+  overflow-x: hidden;
+
 }
  .search_wrap .search_box .btn:hover{
 	background: #888888;	
+  overflow-x: hidden;
+
 }
 
  .search_wrap .search_box .btn.btn_common .fas{
@@ -224,6 +286,8 @@ Search Bar ---------------------------------------------------------------------
 	transform: translate(-50%,-50%);
 	color: #557a95;
 	font-size: 20px;
+  overflow-x: hidden;
+
 }
 /*
 Search Bar ----------------------------------------------------------------------------------------
@@ -235,6 +299,8 @@ Search Bar ---------------------------------------------------------------------
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    overflow-x: hidden;
+
 }
 
 .scroll-button {
@@ -249,6 +315,8 @@ Search Bar ---------------------------------------------------------------------
     width: 180px; /* Initial width for circle */
     height: 50px; /* Initial height for circle */
     opacity: 50%;
+    overflow-x: hidden;
+
 }
 
 
@@ -261,12 +329,16 @@ Search Bar ---------------------------------------------------------------------
     line-height: 10px; /* Adjust line height for proper spacing */
     opacity: 1;
     padding: 15px 20px;
+    overflow-x: hidden;
+
 }
 .scroll-buttons{
     background-color: #8b7d77;
     border-radius: 5px;
     width: 180px;
     align-items: center;
+    overflow-x: hidden;
+
 }
 
 .scroll-button:hover{
@@ -275,6 +347,8 @@ Search Bar ---------------------------------------------------------------------
     font-weight: bolder;
     text-align: center;
     opacity: 100%;
+    overflow-x: hidden;
+
 
 }
 .Home{
@@ -298,21 +372,29 @@ Search Bar ---------------------------------------------------------------------
     width: 100%;
     height: 100vh;
     position: absolute;
+    overflow-x: hidden;
+
   }
 
 .Home h1{
   font-size: 120px;
   padding-left: 5%;
   padding-top: 150px;
+  overflow-x: hidden;
+
 }
 .Home h2{
   font-size: 150px;
   margin-top: 235px;
   margin-left: -307px;
   color: #fff;
+  overflow-x: hidden;
+
 }
 .sections{
   scroll-snap-align: start;
+  overflow-x: hidden;
+
 }
 
 .About{
@@ -325,11 +407,15 @@ Search Bar ---------------------------------------------------------------------
     align-items: top;
     position: absolute;
     padding-top: 70px;
+    overflow-x: hidden;
+
 }
 .About h1{
   font-size: 120px;
   padding-left: 5%;
   padding-top: 150px;
+  overflow-x: hidden;
+
 }
 .section {
     width: 100vw;
@@ -348,6 +434,8 @@ Search Bar ---------------------------------------------------------------------
     background-repeat: no-repeat;
     background-size: 0;
     background-position: 100%;
+    overflow-x: hidden;
+
 
   }
   .background-colors{
@@ -447,14 +535,20 @@ Search Bar ---------------------------------------------------------------------
 
  .active-section {
   opacity: 1;
+  overflow-x: hidden;
+
 }
 .hidden-section{
   opacity: 0;
+  overflow-x: hidden;
+
   pointer-events: none;
 }
 
 .grid-item span.item {
   user-select: none; /* Make the numbers inside grid items not selectable */
+  overflow-x: hidden;
+
 }
 
 /*
@@ -485,11 +579,15 @@ Rotating Banner ----------------------------------------------------------------
 }
  .slider a{
 display:contents;
+overflow-x: hidden;
+
 }
  .slider img{
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: fill;
+  overflow-x: hidden;
+
 }
 .slider-nav{
   display: flex;
