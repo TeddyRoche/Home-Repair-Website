@@ -511,6 +511,18 @@ Rotating Banner ----------------------------------------------------------------
     padding-left: 2px;
 
   }
+  .Search-Bar{
+    top: 60px;
+    left: 10px;
+  }
+  .search_wrap .search_box{
+    
+    width: 95vw;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
   .buttons ul{
     position: absolute;
     display: flex;
@@ -522,7 +534,7 @@ Rotating Banner ----------------------------------------------------------------
   .buttons{
     position: relative;
     display: flex;
-    top: 60px;
+    top: 120px;
     left: 0;
     width: auto;
     padding: 0%;
