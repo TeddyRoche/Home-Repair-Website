@@ -363,6 +363,7 @@ Search Bar ---------------------------------------------------------------------
     position: absolute;
     background-color: #000;
     width: calc(50% - 192px);
+    min-width: 412px;
     height: 100vh;
     left: 0px;
     z-index: -3;
@@ -379,7 +380,13 @@ Search Bar ---------------------------------------------------------------------
     z-index: -1; /* Place the pseudo-element behind the content */
     background-position: 0%;
     background-size: calc(50% - 192px) 100%;
+}
 
+@media screen and (max-width: 1205px) {
+
+    .section::before {
+    background-size: 412px 100%;
+}
 }
 .section a{
   position: absolute;
