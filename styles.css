@@ -356,6 +356,7 @@ Search Bar ---------------------------------------------------------------------
     width: 100vw;
     height: auto;
     z-index: -4;
+    overflow-x: hidden;
   }
   .white{
     position: absolute;
@@ -366,6 +367,7 @@ Search Bar ---------------------------------------------------------------------
     left: 0px;
     z-index: -3;
     opacity: 1;
+    overflow-x: hidden;
   }
   .section::before {
     content: "";
@@ -378,6 +380,7 @@ Search Bar ---------------------------------------------------------------------
     z-index: -1; /* Place the pseudo-element behind the content */
     background-position: 0%;
     background-size: calc(50% - 192px) 100%;
+    overflow-x: hidden;
 }
 .section a{
   position: absolute;
@@ -388,6 +391,7 @@ Search Bar ---------------------------------------------------------------------
   top: 40%;
   font-size: 100px;
   z-index: 0;
+  overflow-x: hidden;
 }
 
  .grid-con  {
@@ -403,6 +407,7 @@ Search Bar ---------------------------------------------------------------------
       justify-content: center;
       left: calc(45% - 100px);
       opacity: 1;
+      overflow-x: hidden;
     }
     
 .grid-item{
@@ -412,6 +417,7 @@ Search Bar ---------------------------------------------------------------------
     border-radius: 50%;
     height: 250px;
     cursor: pointer;
+    overflow-x: hidden;
 }
 
 
@@ -430,11 +436,13 @@ Search Bar ---------------------------------------------------------------------
   z-index: 1; /* Ensure links are clickable over other content */
   overflow: hidden; /* Clip any overflowing content */
   color: inherit; /* Inherit text color from parent */
+  overflow-x: hidden;
   
 }
 .item{
     text-align: center;
     display: inline-block;
+    overflow-x: hidden;
 }
 
  .active-section {
@@ -455,6 +463,7 @@ Rotating Banner ----------------------------------------------------------------
  .container{
   padding: 0rem;
   width: 95vw;
+  overflow-x: hidden;
 }
  .slider-wrapper {
   position: relative;
@@ -463,6 +472,7 @@ Rotating Banner ----------------------------------------------------------------
   left: calc(70% - 500px);
   border: 3px solid #557a95;
   border-radius: 0.65rem;
+  overflow-x: hidden;
 }
  .slider {
   display: flex;
@@ -489,6 +499,7 @@ display:contents;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  overflow-x: hidden;
 }
  .slider-nav a{
   width: 1rem;
@@ -497,9 +508,11 @@ display:contents;
   background-color: #557a95;
   opacity: 0.75;
   transition: opacity ease 250ms;
+  overflow-x: hidden;
 }
  .slider-nav a:hover{
   opacity: 1;
+  overflow-x: hidden;
 }
 /*
 Rotating Banner -----------------------------------------------------------------------------------
