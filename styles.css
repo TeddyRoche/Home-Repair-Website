@@ -510,132 +510,14 @@ display:contents;
 /*
 Rotating Banner -----------------------------------------------------------------------------------
 */
-@media screen and (max-width: 1835px) 
+@media  screen and (max-width: 600px) 
 {
-.grid-con{
-  grid-template-columns: 25% 25% 25%;
-
-}
-
-}
-
-@media screen and (max-width: 1480px) 
-{
-  .Search-Bar{
-    top: 80%; 
-    left: calc(100% - 640px);  
-
-  }
-  .search_wrap .search_box{
-    position: relative;
-    width: 620px;
-    height: 40px;  
-  }
-
-  .links-nav{
-    margin-top: 15px;
-    padding-top: 5px;
-    font-size: 20px;
-    padding-right: calc(2% + 40px);
-    margin-left: 30px;
-    border-right: 1px solid white;
-  }
-
-}
-
-@media  screen and (max-width: 1230px) 
-{
-  .Home h1{
-    position: relative;
-    width: auto;
-    height: auto;
-    left: calc(40% - 100px);
-  }
-  .Home h2{
-    position: relative;
-    width: auto;
-    height: auto;
-    left: calc(40% - 150px);
-  }
-  .container{
+  .logo{
+    display: flex;
     position: absolute;
-    left: 0;
-    top: 30%;
+    justify-content: center;
+    align-items: center;
+    
   }
   
-}
-
-@media screen and (max-width: 880px) {
-
-  .search_wrap .search_box{
-    position: relative;
-    width: 98vw;
-    height: 40px;  
-  }
-  .Search-Bar{
-    top: 180%; 
-    left: 5px;
-  }
-  .buttons{
-    position: relative;
-    left: calc(50% - 320px);
-    margin-top: 10px;
-    padding-top: 0px;
-    font-size: 20px;
-    padding-right: calc(2% + 40px);
-    margin-left: 0;
-  }
-  .dropdown{
-    border-right: transparent;
-    z-index: 5;
-  }
-
-  .buttons{
-    position: relative;
-    top: 75%;
-  }
-  .logo{
-    left: calc(50% - 80px);
-    position: absolute;
-  }
-
-}
-
-
-@media screen and (max-width: 650px) {
-  .buttons{
-    position: relative;
-    left: calc(62% - 200px);
-    margin-top: 10px;
-    padding-top: 0px;
-    font-size: 20px;
-    padding-right: 0;
-    margin-left: 0;
-  }
-  .links-nav{
-    margin-top: 15px;
-    padding-top: 5px;
-    font-size: 20px;
-    padding-right: 5px;
-    margin-left: 0px;
-    padding-left: 5px;
-  }
-  .dropdown{
-    padding-left: 0px;
-  }
-  .Search-Bar{
-    top: 180%; 
-    left: 5px;  
-
-  }
-  .search_wrap .search_box{
-    position: relative;
-    width: 96vw;
-    height: 40px;  
-  }
-  .logo{
-    left: calc(62% - 155px);
-    position: absolute;
-  }
-
 }
