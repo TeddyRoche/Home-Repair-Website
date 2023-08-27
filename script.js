@@ -75,6 +75,7 @@ sectionNames.forEach(sectionName => {
             sectionImageFormat = format;
             const sectionImageUrl = `images/${sectionClassName}.${sectionImageFormat}`;
             sectionDiv.style.backgroundImage = `url(${sectionImageUrl})`;
+            sectionDiv.style.overflowX = "hidden";
 
         };
     }
@@ -92,6 +93,7 @@ sectionNames.forEach(sectionName => {
             gridItem.classList.add('grid-item');
             gridItem.style.borderWidth = '2px';
             gridItem.style.borderStyle = 'solid';
+            gridItem.style.overflowX = "hidden";
             
             // Grid Images
             let backgroundImageUrl;
@@ -105,6 +107,7 @@ sectionNames.forEach(sectionName => {
                     gridItem.style.backgroundSize = 'cover';
                     gridItem.style.backgroundRepeat = 'no-repeat';
                     gridItem.style.backgroundPosition = 'center';
+                    gridItem.style.overflowX = "hidden";
                 };
             }
 
@@ -150,6 +153,7 @@ function setBackgroundImage(sectionElement, sectionName) {
     const imageUrl = `images/${imageName}.jpg`; // Adjust the path to your images folder
     
     sectionElement.style.backgroundImage = `url('${imageUrl}')`;
+    sectionElement.style.overflowX = "hidden";
 }
 
 //Side Menu-------------------------------------------------------------------------------------
