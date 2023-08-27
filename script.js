@@ -245,24 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
         targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    window.addEventListener('wheel', function(event) {
-        if (!isScrolling) {
-            if (event.deltaY > 0) {
-                wheelIndex = Math.min(wheelIndex + 1, sections.length - 1);
-            } else {
-                wheelIndex = Math.max(wheelIndex - 1, 0);
-            }
-
-            scrollToSection(wheelIndex);
-
-            event.preventDefault();
-            isScrolling = true;
-
-            setTimeout(() => {
-                isScrolling = false;
-            }, 0); // Adjust the duration as needed
-        }
-    });
+    
     // Scroll to the initial section (Home)
     scrollToSection(wheelIndex);
 });
