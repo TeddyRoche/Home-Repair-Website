@@ -25,7 +25,7 @@ body {
    .NAV {
     position: fixed;
     z-index: 2;
-    width: 100%;
+    width: 100vw;
     overflow-x: hidden;
   }
    .logo {
@@ -354,7 +354,7 @@ Search Bar ---------------------------------------------------------------------
 
 }
 .Home{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     scroll-snap-align: start;
     background-image: url('Images/Home.jpg');
@@ -399,7 +399,7 @@ Search Bar ---------------------------------------------------------------------
 
 .About{
     top: 200%;  
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     scroll-snap-align: start;
     color: #557a95;
