@@ -382,7 +382,6 @@ Search Bar ---------------------------------------------------------------------
   font-size: 120px;
   padding-left: 5%;
   padding-top: 150px;
-  overflow-x: hidden;
 
 }
 .Home h2{
@@ -390,7 +389,6 @@ Search Bar ---------------------------------------------------------------------
   margin-top: 235px;
   margin-left: -307px;
   color: #fff;
-  overflow-x: hidden;
 
 }
 .sections{
