@@ -7,7 +7,6 @@ body {
     margin: 0;
     background-color: #557a95;
     padding: 0;
-    z-index: -3;
   }
 *{
     margin: 0;
@@ -378,13 +377,6 @@ Search Bar ---------------------------------------------------------------------
     background-position: 0%;
     background-size: calc(50% - 192px) 100%;
 }
-
-@media screen and (max-width: 1205px) {
-
-    .section::before {
-    background-size: 412px 100%;
-}
-}
 .section a{
   position: absolute;
   color: #fff;
@@ -510,21 +502,3 @@ display:contents;
 /*
 Rotating Banner -----------------------------------------------------------------------------------
 */
-@media  screen and (max-width: 600px) 
-{
-  .Home{
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
-    background-image: url('Images/Home.jpg');
-    display: flex;
-    align-items: top;
-    justify-content: left;
-    z-index: -2;
-    font-size: 24px;
-    color: #fff;
-    position: relative;
-    border-bottom: none;
-  }
-  
-}
