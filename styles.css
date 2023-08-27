@@ -1,6 +1,13 @@
 html {
     scroll-behavior: smooth;
 }
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #557a95;
+    padding: 0;
+  }
 *{
     margin: 0;
     padding: 0;
@@ -276,13 +283,11 @@ Search Bar ---------------------------------------------------------------------
     background-image: url('Images/Home.jpg');
     display: flex;
     align-items: top;
-    justify-content: left;
+    justify-content: center;
     z-index: -2;
     font-size: 24px;
     color: #fff;
     position: relative;
-    border-bottom: none;
-
   }
   .black{
     background-color: black;
