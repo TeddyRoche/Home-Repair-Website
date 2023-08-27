@@ -513,6 +513,7 @@ Rotating Banner ----------------------------------------------------------------
   }
   .buttons ul{
     position: absolute;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
