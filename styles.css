@@ -615,3 +615,84 @@ overflow-x: hidden;
 /*
 Rotating Banner -----------------------------------------------------------------------------------
 */
+
+@media screen and (max-width: 600px) 
+{
+  .NAV{
+    position: absolute;
+    height: 175px;
+  }
+  .logo{
+    display: flex;
+    position: absolute;
+    left: 31%;
+  }
+  .Search-Bar {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10px;
+    top: 50px;
+  }
+  .search_wrap .search_box{
+    width: 95vw;
+  }
+  .buttons{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 85px;
+  }
+  .Home{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    height: 800px;
+  }
+  .black{
+    height: 800px;
+  }
+  .Home h1{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+  .Home h2{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+
+  }
+  .container{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 250px;
+  }
+  .slider-wrapper{
+    left: 0;
+  }
+  .section{
+    display: flex;
+    position: absolute;
+    justify-content:center ;
+    align-items: center;
+    top: 800px;
+    height: 800px;
+  }
+  .About{
+    display: flex;
+    position: absolute;
+    justify-content:center ;
+    align-items: center;
+    top: 1600px;
+  }
+  
+}
