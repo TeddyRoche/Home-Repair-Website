@@ -362,7 +362,7 @@ Search Bar ---------------------------------------------------------------------
   .white{
     position: absolute;
     background-color: #000;
-    width: 40%;
+    width: calc(50% - 192px);
     height: 100vh;
     left: 0px;
     z-index: -3;
@@ -378,7 +378,7 @@ Search Bar ---------------------------------------------------------------------
     opacity: 0.5; /* Set the desired opacity */
     z-index: -1; /* Place the pseudo-element behind the content */
     background-position: 0%;
-    background-size: 40% 100%;
+    background-size: calc(50% - 192px) 100%;
 
 }
 .section a{
