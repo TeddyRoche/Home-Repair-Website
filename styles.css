@@ -502,3 +502,27 @@ display:contents;
 /*
 Rotating Banner -----------------------------------------------------------------------------------
 */
+@media  screen and (max-width: 600px) 
+{
+  .logo{
+    padding-left: 0px;
+  }
+  .logo span{
+    padding-left: 2px;
+
+  }
+  .buttons ul{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .buttons{
+    position: relative;
+    display: flex;
+    top: 60px;
+    left: 0;
+    width: auto;
+    padding: 0%;
+  }
+}
