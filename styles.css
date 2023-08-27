@@ -8,6 +8,7 @@ body {
     margin: 0;
     background-color: #557a95;
     padding: 0;
+    overflow-x: hidden;
   }
 *{
     margin: 0;
@@ -18,7 +19,6 @@ body {
     box-sizing: border-box;
     font-family: "Baskerville", serif;
 }
-
 /*
   Nav Bar ----------------------------------------------------------------------------------------
   */
@@ -289,6 +289,7 @@ Search Bar ---------------------------------------------------------------------
     font-size: 24px;
     color: #fff;
     position: relative;
+    overflow-x: hidden;
   }
   .black{
     background-color: black;
