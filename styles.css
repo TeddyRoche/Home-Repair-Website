@@ -706,6 +706,33 @@ Rotating Banner ----------------------------------------------------------------
     background-position: 0%;
     background-size: 100% 100%;
     overflow-x: hidden;
+    text-align: center;
 }
+.grid-con  {
+  position: absolute;
+  display: grid;
+  width: 95vw;
+  grid-template-columns: 25% 25% 25%;
+  gap: 2%;
+  top: 30%;
+  color: #fff;
+  overflow: hidden;
+  justify-content: center;
+  left: 0;
+  opacity: 1;
+  overflow-x: hidden;
+}
+.scroll-buttons{
+  
+}
+  .section a{
+    top: 5px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 5%;
+    font-size: 50px;
+  }
   
 }
