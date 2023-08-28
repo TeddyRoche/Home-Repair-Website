@@ -82,27 +82,24 @@ body {
   }
    ul {
     list-style: none;
-    height: 80%;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 15px;
-    margin-top: 5px;
+    margin-top: 0px;
     padding-bottom: 25px;
     padding: 5px 20px 20px 10px;
-    border-radius: 40%;
     overflow-x: hidden;
 
   }
   .links-nav{
-    margin-top: 15px;
-    padding-top: 5px;
     font-size: 20px;
-    padding-right: 35px;
-    padding-left: 30px;
-    border-right: 1px solid white;
+    padding-right: 5px;
+    padding-left: 5px;
     overflow-x: hidden;
+    position: relative;
 
   }
    ul a {
@@ -132,83 +129,6 @@ body {
     overflow-x: hidden;
 
   }
-   .dropdown {
-    position: relative;
-    margin-top: 15px;
-    display: inline-block; /* Keep the dropdown as an inline block */
-    padding-left: 30px;
-    overflow-x: hidden;
-
-  }
-  .dropdown.open .dropdown-content {
-    display: block;
-    overflow-x: hidden;
-
-  }
-
-   .dropdown-content {
-    position: absolute;
-    top: 137%;
-    left: -75px;
-    width: 200px;
-    background-color: #fff;
-    border: 1px solid #557a95;
-    border-radius: 10px;
-    border-top: none;
-    padding: 10px;
-    display: none;
-    overflow-x: hidden;
-
-  }
-  .dropdown-content:hover{
-    transform: none;
-    overflow-x: hidden;
-
-  }
-  
-   .dropdown-content form {
-    padding-top: 10px;
-    margin-bottom: 10px;
-    overflow-x: hidden;
-
-  }
-  
-   .dropdown-content input {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 5px;
-    border: 1px solid #557a95;
-    overflow-x: hidden;
-
-  }
-   .dropdown-content .options {
-    text-align: center;
-    margin-top: -10px;
-    overflow-x: hidden;
-
-  }
-   .dropdown-content .options a {
-    display: inline-block;
-    margin-bottom: 10px;
-    color: #557a95;
-    font-size: 12px;
-    text-decoration: underline;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-    overflow-x: hidden;
-
-  }
-   .dropdown-content .options a:hover {
-    color: #30bd53;
-    overflow-x: hidden;
-
-  }
-   .dropdown-content .options .separator {
-    color: #557a95;
-    margin: 0 5px;
-    overflow-x: hidden;
-
-  }
    .logo{
     z-index: 2;
     overflow-x: hidden;
@@ -226,23 +146,25 @@ body {
 Search Bar ----------------------------------------------------------------------------------------
 */
   .Search-Bar{
-    position: absolute;
-    left: calc(95% - 1200px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
     overflow-x: hidden;
-
   }
  .Search-Bar .input{
 	border: 0;
 	outline: none;
 	color: #8b7d77;
   overflow-x: hidden;
-
+  display: none;
+  border:2px solid #557a95;
 }
  .search_wrap{
-  margin-top: 10px;
-  border: 2px solid #557a95;
+  margin-top: 0px;
   overflow-x: hidden;
-
+  display: block;
 }
  .search_wrap .search_box{
 	position: relative;
@@ -265,23 +187,47 @@ Search Bar ---------------------------------------------------------------------
  .search_wrap .search_box .btn{
 	position: absolute;
 	top: 0;
-    right: 0%;
+  right: 0%;
 	width: 60px;
 	height: 100%;
-	background: #b3b3b3;
 	z-index: 1;
 	cursor: pointer;
-  border-left: 2px solid #557a95;
   overflow-x: hidden;
+  display: block;
 
 }
- .search_wrap .search_box .btn:hover{
-	background: #888888;	
-  overflow-x: hidden;
-
+.search_wrap .search_box .btn.btn_common .fas:hover{
+  color: #30bd53;	
 }
 
  .search_wrap .search_box .btn.btn_common .fas{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+	font-size: 20px;
+  overflow-x: hidden;
+}
+
+
+.search_wrap .search_box .btn-2{
+	position: absolute;
+  background-color: rgb(168, 168, 168);
+	top: 0;
+  right: 0%;
+	width: 60px;
+	height: 100%;
+	z-index: 1;
+	cursor: pointer;
+  border: 2px solid #557a95;
+  overflow-x: hidden;
+  display: none;
+}
+.search_wrap .search_box .btn-2.btn_common-2:hover{
+  background-color: rgb(134, 134, 134);	
+}
+ .search_wrap .search_box .btn-2.btn_common-2 .fas{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -439,14 +385,7 @@ Search Bar ---------------------------------------------------------------------
 
 
   }
-  .background-colors{
-    position: absolute;
-    background-color: #557a95;
-    width: 100vw;
-    height: auto;
-    z-index: -4;
-    overflow-x: hidden;
-  }
+
   .white{
     position: absolute;
     background-color: #000;
@@ -655,6 +594,18 @@ Rotating Banner ----------------------------------------------------------------
   .black{
     height: 800px;
   }
+  .white{
+    background-color: #000;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 800px;
+    top: 800px;
+    opacity: 1;
+    z-index: -2;
+  }
   .Home h1{
     display: flex;
     position: absolute;
@@ -681,6 +632,7 @@ Rotating Banner ----------------------------------------------------------------
     left: 0;
   }
   .section{
+    scroll-snap-type: start;
     display: flex;
     position: absolute;
     justify-content:center ;
@@ -733,7 +685,7 @@ Rotating Banner ----------------------------------------------------------------
   gap: 0px;
   padding: 0;
   margin: 0;
-padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 

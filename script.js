@@ -3,38 +3,60 @@
 //    alert("Welcome! This is my Current Senior Project that is currently in Development and is not live yet. Please feel free to look around, but dont expect a finished project. Thank You!!");
 //};
 
-//Account Dropdown---------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
-    var dropdown = document.querySelector(".dropdown");
-    var dropdownContent = document.querySelector(".dropdown-content");
-    var usernameInput = document.querySelector("#username");
-    var passwordInput = document.querySelector("#password");
-    
-    dropdown.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevent the click from reaching the document
-        event.preventDefault(); // Prevent the default behavior (scrolling)
+    const inputElement = document.querySelector(".Search-Bar .input");
+    const searchWrap = document.querySelector(".Search-Bar");
+    const toggleButton = document.getElementById("toggleButton");
+    function closeSearchBar() {
+        inputElement.style.display = "none";
+    }
 
-        // Check if the dropdown is not open, and then open it
-        if (!dropdown.classList.contains("open")) {
-            dropdown.classList.add("open");
+    toggleButton.addEventListener("click", function() {
+        // Check the current display property
+        if (inputElement.style.display === "none" || inputElement.style.display === "") {
+            inputElement.style.display = "block";
+        } else {
+            inputElement.style.display = "none";
         }
-        
     });
-
-    document.addEventListener("click", function(event) {
-        // Check if the clicked element is NOT within the dropdown
-        if (!dropdown.contains(event.target) && dropdown.classList.contains("open")) {
-            event.preventDefault(); // Prevent the default behavior (scrolling)
-            event.stopPropagation(); // Prevent the click from reaching the document
-
-            dropdown.classList.remove("open"); // Close the dropdown
-
-            usernameInput.value = "";
-            passwordInput.value = "";
+    document.body.addEventListener("click", function(event) {
+        const isInsideSearchWrap = searchWrap.contains(event.target);
+        if (!isInsideSearchWrap) {
+            closeSearchBar();
         }
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const button1 = document.querySelector(".search_wrap .search_box .btn.btn_common");
+    const button2 = document.querySelector(".search_wrap .search_box .btn-2.btn_common-2");
+    const searchWrap = document.querySelector(".Search-Bar");
+    const toggleButton = document.getElementById("toggleButton");
+
+    function closeSearchBar() {
+        button1.style.display = "block";
+        button2.style.display = "none";
+
+    }
+
+    toggleButton.addEventListener("click", function() {
+        if (button1.style.display === "block" || button1.style.display === "") {
+            button1.style.display = "none";
+            button2.style.display = "block";
+        } else {
+            button1.style.display = "block";
+            button2.style.display = "none";
+        }
+    });
+    document.body.addEventListener("click", function(event) {
+        const isInsideSearchWrap = searchWrap.contains(event.target);
+        if (!isInsideSearchWrap) {
+            closeSearchBar();
+        }
+    });
+
+
+});
 //Lists-------------------------------------------------------------------------------------
 const sectionNames = [
     "Home", "Electric", "Plumbing", "Walls", 
@@ -150,7 +172,6 @@ function setBackgroundImage(sectionElement, sectionName) {
     const imageUrl = `images/${imageName}.jpg`; // Adjust the path to your images folder
     
     sectionElement.style.backgroundImage = `url('${imageUrl}')`;
-    sectionElement.style.overflowX = "hidden";
 }
 
 //Side Menu-------------------------------------------------------------------------------------
