@@ -6,15 +6,18 @@
 document.addEventListener("DOMContentLoaded", function() {
     const inputElement = document.querySelector(".Search-Bar .input");
     const searchWrap = document.querySelector(".Search-Bar");
+    const widthelement = document.querySelector(".search_wrap .search_box");
     const toggleButton = document.getElementById("toggleButton");
     function closeSearchBar() {
         inputElement.style.display = "none";
+        widthelement.style.width = "60px";
     }
 
     toggleButton.addEventListener("click", function() {
         // Check the current display property
         if (inputElement.style.display === "none" || inputElement.style.display === "") {
             inputElement.style.display = "block";
+            widthelement.style.width = "700px";
         } else {
             inputElement.style.display = "none";
         }

@@ -43,6 +43,8 @@ body {
 
   }
    .logo span {
+    position: relative;
+    display: flex;
     font-weight: bold;
     padding-left: 10px;
     padding-top: 10px;
@@ -168,7 +170,7 @@ Search Bar ---------------------------------------------------------------------
 }
  .search_wrap .search_box{
 	position: relative;
-	width: 700px;
+	width: 60px;
 	height: 40px;  
   overflow-x: hidden;
 
