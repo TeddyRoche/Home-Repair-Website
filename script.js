@@ -66,11 +66,11 @@ const sectionNames = [
     "Floor-&-Ceiling", "Heat-&-AC",  "About"
 ];
 const GridPages = {
-    Electric: ['outlet', 'wire', 'fuse-box', 'lighting', 'fan'],
-    Plumbing: [1, 2, 3, 4, 5],
-    Walls: [1, 2, 5],
-    'Floor-&-Ceiling': [1, 2],
-    'Heat-&-AC': [1, 2, 3, 4, 5, 6],
+    Electric: ['outlet'],
+    Plumbing: [],
+    Walls: [],
+    'Floor-&-Ceiling': [],
+    'Heat-&-AC': [],
 
 };
 
