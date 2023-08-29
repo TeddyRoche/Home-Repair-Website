@@ -246,8 +246,10 @@ Search Bar ---------------------------------------------------------------------
         font-size: 100px;
         line-height: 1;
     }
-    .input{
-        width: 95vw;
+    .search_wrap .search_box .input{
+        width: 85vw;
+        overflow: hidden;
     }
+
     
 }
