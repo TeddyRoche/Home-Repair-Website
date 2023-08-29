@@ -80,6 +80,27 @@ const styleSheet = document.styleSheets[0]; // Get the first stylesheet
 const sectionsContainer = document.querySelector('.sections');
 
 
+function Search_Function(){
+    const input = document.getElementById("myInput").value;
+    sectionNames.forEach(sectionName => {
+        for(const i of GridPages[sectionName]){
+            if (input == i){
+                location.href = `Webpages/${i}/${i}.html?item=${i}`;
+                return false;
+            }
+            else if (input == "sad"){
+                location.href = "suggestion_sad.html";
+                return false;
+            }
+            else {
+                alert('Invalid Input.');
+            }
+        }
+    });
+}
+    
+
+
 //Background Color------------------------------------------------------------------------
 sectionNames.forEach(sectionName => {
     if (sectionName !== "Home" && sectionName !== "About") {

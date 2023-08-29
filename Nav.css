@@ -221,3 +221,33 @@ Search Bar ---------------------------------------------------------------------
 /*
 Search Bar ----------------------------------------------------------------------------------------
 */
+
+@media screen and (max-width: 600px) {
+    .NAV{
+        height: 100px;
+        background-color: #557a95;
+    }
+    .logo{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        left: 25%;
+    }
+    .ul{
+        border: 2px solid red;
+    }
+    .buttons{
+        position: fixed;
+        top: 40px;
+    }
+    .Home h1{
+        text-align: center;
+        font-size: 100px;
+        line-height: 1;
+    }
+    .input{
+        width: 95vw;
+    }
+    
+}

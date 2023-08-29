@@ -113,18 +113,12 @@ body {
   }
 
 .Home h1{
-  font-size: 120px;
+  font-size: 150px;
   padding-left: 5%;
   padding-top: 150px;
 
 }
-.Home h2{
-  font-size: 150px;
-  margin-top: 235px;
-  margin-left: -307px;
-  color: #fff;
 
-}
 .sections{
   scroll-snap-align: start;
   overflow-x: hidden;
@@ -368,27 +362,12 @@ Rotating Banner ----------------------------------------------------------------
     opacity: 1;
     z-index: -2;
   }
-  .Home h1{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0;
-  }
-  .Home h2{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-
-  }
   .container{
     display: flex;
     position: absolute;
     justify-content: center;
     align-items: center;
-    top: 250px;
+    top: 200px;
   }
   .slider-wrapper{
     left: 0;
