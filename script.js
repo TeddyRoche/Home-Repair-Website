@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchWrap = document.querySelector(".Search-Bar");
     const widthelement = document.querySelector(".search_wrap .search_box");
     const toggleButton = document.getElementById("toggleButton");
+    const input = document.getElementById("myInput");
     function closeSearchBar() {
         inputElement.style.display = "none";
         widthelement.style.width = "60px";
+        input.value = "";
     }
 
     toggleButton.addEventListener("click", function() {
@@ -80,23 +82,28 @@ const styleSheet = document.styleSheets[0]; // Get the first stylesheet
 const sectionsContainer = document.querySelector('.sections');
 
 
-function Search_Function(){
-    const input = document.getElementById("myInput").value;
-    sectionNames.forEach(sectionName => {
-        for(const i of GridPages[sectionName]){
-            if (input == i){
-                location.href = `Webpages/${i}/${i}.html?item=${i}`;
-                return false;
-            }
-            else if (input == "sad"){
-                location.href = "suggestion_sad.html";
-                return false;
-            }
-            else {
-                alert('Invalid Input.');
+function searchAndOpen() {
+    // Get the input value and convert it to lowercase
+    const input = document.getElementById("myInput").value.toLowerCase();
+
+    // Check if the input matches any category in GridPages
+    for (const category in GridPages) {
+        if (GridPages.hasOwnProperty(category)) {
+            const keywords = GridPages[category];
+            if (keywords.includes(input)) {
+                const url = `WebPages/${input}/${input}.html`;
+                openWebpage(url);
+                return; // Stop searching after the first match
             }
         }
-    });
+    }
+
+    alert("No matching category found.");
+}
+
+function openWebpage(url) {
+    // Open the corresponding webpage in a new tab
+    window.location.href = url;
 }
     
 
