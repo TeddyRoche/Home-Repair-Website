@@ -1,7 +1,10 @@
-//Pop-up ------------------------------------------------------------------------------------
-//window.onload = function() {
-//    alert("Welcome! This is my Current Senior Project that is currently in Development and is not live yet. Please feel free to look around, but dont expect a finished project. Thank You!!");
-//};
+function openPopup() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     const inputElement = document.querySelector(".Search-Bar .input");

@@ -5,20 +5,20 @@
     position: fixed;
     z-index: 2;
     width: 100vw;
-    overflow-x: hidden;
+    overflow: hidden;
   }
    .logo {
     text-align: center;
     display: flex;
     padding-top: 10px;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
    .logo img {
     width: 40px;
     height: 40px;
     border-radius: 15%;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
    .logo span {
@@ -30,12 +30,12 @@
     font-size: 18px;
     text-transform: uppercase;
     color: white;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
    header a {
     text-decoration: none;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
    header {
@@ -45,7 +45,7 @@
     height: 65px;
     display: flex;
     justify-content: space-between;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
   #brand {
@@ -53,12 +53,12 @@
     font-size: 18px;
     display: flex;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
   #brand a {
     color: #09c372;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
    ul {
@@ -72,14 +72,14 @@
     margin-top: 0px;
     padding-bottom: 25px;
     padding: 5px 20px 20px 10px;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
   .links-nav{
     font-size: 20px;
     padding-right: 5px;
     padding-left: 5px;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
 
   }
@@ -88,36 +88,36 @@
     color: #fff;
     font-size: 18px;
     font-weight: bold;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
    ul p {
     font-size: 16px;
     font-weight: bolder;
     margin-top: -5px;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
    ul li {
     padding: 1px;
     margin-left: 10px;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
    ul a:hover {
       color: #30bd53;
     transition: 0.3s;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
    .logo{
     z-index: 2;
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
    .logo:hover{
     transform: scale(1.05);
-    overflow-x: hidden;
+    overflow: hidden;
 
   }
   /*
@@ -132,13 +132,13 @@ Search Bar ---------------------------------------------------------------------
     justify-content: center;
     align-items: center;
     height: 54px;
-    overflow-x: hidden;
+    overflow: hidden;
   }
  .Search-Bar .input{
 	border: 0;
 	outline: none;
 	color: #8b7d77;
-  overflow-x: hidden;
+  overflow: hidden;
   display: none;
   border:2px solid #557a95;
 }
@@ -151,14 +151,14 @@ button{
 }
  .search_wrap{
   margin-top: 0px;
-  overflow-x: hidden;
+  overflow: hidden;
   display: block;
 }
  .search_wrap .search_box{
 	position: relative;
 	width: 60px;
 	height: 40px;  
-  overflow-x: hidden;
+  overflow: hidden;
 
 }
  .search_wrap .search_box .input{
@@ -169,7 +169,7 @@ button{
 	height: 100%;
 	padding: 10px 20px;
 	font-size: 18px;
-  overflow-x: hidden;
+  overflow: hidden;
 
 }
  .search_wrap .search_box .btn{
@@ -180,7 +180,7 @@ button{
 	height: 100%;
 	z-index: 1;
 	cursor: pointer;
-  overflow-x: hidden;
+  overflow: hidden;
   display: block;
 
 }
@@ -195,7 +195,7 @@ button{
 	transform: translate(-50%,-50%);
 	color: #fff;
 	font-size: 20px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 
@@ -209,7 +209,7 @@ button{
 	z-index: 1;
 	cursor: pointer;
   border: 2px solid #557a95;
-  overflow-x: hidden;
+  overflow: hidden;
   display: none;
   
 }
@@ -223,7 +223,7 @@ button{
 	transform: translate(-50%,-50%);
 	color: #557a95;
 	font-size: 20px;
-  overflow-x: hidden;
+  overflow: hidden;
   pointer-events: none;
 
 }
