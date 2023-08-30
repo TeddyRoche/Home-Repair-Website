@@ -65,14 +65,14 @@ document.addEventListener("DOMContentLoaded", function() {
 //Lists-------------------------------------------------------------------------------------
 const sectionNames = [
     "Home", "Electric", "Plumbing", "Walls", 
-    "Floor-&-Ceiling", "Heat-&-AC",  "About"
+    "Floor/Ceiling", "Heat/AC",  "About"
 ];
 const GridPages = {
     Electric: ['outlet'],
     Plumbing: [],
     Walls: [],
-    'Floor-&-Ceiling': [],
-    'Heat-&-AC': [],
+    'Floor/Ceiling': [],
+    'Heat/AC': [],
 
 };
 

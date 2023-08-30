@@ -418,26 +418,21 @@ Rotating Banner ----------------------------------------------------------------
 }
 .scroll-buttons{
   display: grid;
-  justify-content: center;
-  text-align: center;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 40% 30% 25%;
   width: 95vw;
-  left: 3%;
-  gap: 0px;
-  padding: 0;
+  gap: 0;
   margin: 0;
   padding-bottom: 5px;
 }
-
-
 .scroll-button{
   position: relative;
-  text-align: center;
-  width: 1500px;
+  width: 500px;
   height: 50px;
-  left: 5px;
+  left: 0;
   margin: 0;
+  padding: 0px;
 }
+
 .scroll-button:hover{
 top: 0;
 font-weight: normal;
