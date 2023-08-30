@@ -369,6 +369,9 @@ Rotating Banner ----------------------------------------------------------------
     align-items: center;
     top: 200px;
   }
+  .slider{
+    aspect-ratio: 12 / 3;
+  }
   .slider-wrapper{
     left: 0;
   }
