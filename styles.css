@@ -29,6 +29,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background overlay */
   z-index: 10;
+  overflow: auto;
 }
 
 .popup-content {
@@ -420,6 +421,41 @@ Rotating Banner ----------------------------------------------------------------
 
 @media screen and (max-width: 600px) 
 {
+  .popup-content{
+    top: 60%;
+    width: 90%;
+  }
+  .popup h1{
+    font-size: 45px;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-weight: bolder;
+  }
+  .popup h2{
+    font-size: 20px;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    font-weight: bolder;
+  }
+  .popup ol li{
+    list-style-type: circle;
+    position: relative;
+    font-size: 15px;
+    left: 10px;
+    line-height: 1.5;
+  }
+  .popup strong{
+    font-size: 15px;
+  }
+
+
+
   .Home{
     display: flex;
     position: absolute;
