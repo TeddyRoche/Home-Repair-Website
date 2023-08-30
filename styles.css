@@ -335,6 +335,12 @@ overflow-x: hidden;
   opacity: 1;
   overflow-x: hidden;
 }
+#slider-1 .big{
+  display: none;
+}
+#slider-1 .small{
+  display: block;
+}
 /*
 Rotating Banner -----------------------------------------------------------------------------------
 */
@@ -371,6 +377,12 @@ Rotating Banner ----------------------------------------------------------------
   }
   .slider{
     aspect-ratio: 12 / 3;
+  }
+  #slider-1 .big{
+    display: none;
+  }
+  #slider-1 .small{
+    display: block;
   }
   .slider-wrapper{
     left: 0;
