@@ -6,6 +6,8 @@ body {
     margin: 0;
     background-color: transparent;
     padding: 0;
+    color: #fff;
+
   }
 *{
     margin: 0;
@@ -19,6 +21,13 @@ body {
 /*
   Nav Bar ----------------------------------------------------------------------------------------
   */
+
+  .Tab-1{
+    width: 100vw;
+    height: 100vh;
+    background-color: #8b7d77;
+    overflow: hidden;
+  }
   .NAV {
     position: fixed;
     z-index: 2;
@@ -227,117 +236,87 @@ Search Bar ---------------------------------------------------------------------
 Search Bar ----------------------------------------------------------------------------------------
 */
 
-.title{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 65px;
-    font-size: 75px;
-    z-index: 5;
-}
-.intro-para{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding-top: 25px;
-    top: 50px;
-    font-size: 25px;
-    line-height: 1.5;
-}
-.title-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 250px); /* Adjust the number of columns as needed */
-    justify-content: center;
-    align-items: center;
-    gap: 125px;
-    top: 60px;
-    position: relative;
-    text-align: center;
-}
-.image-grid-1{
-    display: grid;
-    grid-template-columns: repeat(4, 250px); /* Adjust the number of columns as needed */
-    gap: 125px; /* Adjust the gap between images */
-    justify-content: center;
-    align-items: center;
-    top: 70px;
-    position: relative;
+
+ .scroll{
+  width: 100vw;
+  height: 100vh;
+  background-color: #557a95;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
-/* Style the individual image elements */
-.image-grid-1 img {
-    max-width: 100%;
-    height: auto;
-}
-.outlet-desc-1{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(4, 300px);
-    gap: 75px;
-    top: 65px;
-    position: relative;
-    text-align: center;
-    font-size: 20px;
-
-}
-.image-grid-2{
-    display: grid;
-    grid-template-columns: repeat(1, 350px); /* Adjust the number of columns as needed */
-    justify-content: center;
-    align-items: center;
-    top: 100px;
-    position: relative;
+.page {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  background-color: #557a95; /* Set your page background color */
+  overflow: hidden;
 }
 
-/* Style the individual image elements */
-.image-grid-2 img {
-    max-width: 100%;
-    height: auto;
-}
-.outlet-desc-2{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(1, 350px);
-    top: 100px;
-    position: relative;
-    text-align: center;
-    font-size: 20px;
-}
-.image-grid-3{
-    display: grid;
-    grid-template-columns: repeat(2, 350px); /* Adjust the number of columns as needed */
-    gap: 425px; /* Adjust the gap between images */
-    justify-content: center;
-    align-items: center;
-    top: 100px;
-    position: relative;
+.scroll-arrow {
+  position: absolute;
+  top: 150%;
+  transform: translateY(-50%);
 }
 
-/* Style the individual image elements */
-.image-grid-3 img {
-    max-width: 100%;
-    height: auto;
+.arrow-button {
+  padding: 5px 10px;
+  font-size: 24px;
+  background-color: transparent; /* Set your button background color */
+  color: #fff; /* Set your button text color */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
-.intro{
-    width: auto;
-    height: auto;
-    font-size: 24px;
+
+
+#scroll-arrow-left {
+  left: 0;
 }
-.outlet-desc-3{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(4, 350px);
-    gap: 50px;
-    top: 100px;
-    position: relative;
-    text-align: center;
-    font-size: 20px;
+
+#scroll-arrow-right {
+  right: 0;
 }
+
+.arrow-button:hover {
+  background-color: #49687f; /* Set your button background color on hover */
+  color: #888888;
+}
+
+.page h2{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 10%;
+  font-size: 50px;
+}
+.page p{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: -15%;
+  font-size: 25px;
+  width: 40%;
+  left: 45%;
+}
+.page img{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 20%;
+  left: 10%;
+  width: 30%;
+  height: 50%;
+}
+
 
 
 
