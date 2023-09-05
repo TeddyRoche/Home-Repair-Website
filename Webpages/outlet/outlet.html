@@ -7,6 +7,7 @@
             <title>Outlet Repair</title>
             <script src="https://kit.fontawesome.com/2197434479.js" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="outlet.css"> 
+
         </head>
         <body>
         <!--
@@ -14,42 +15,47 @@
         -->
         <div class="NAV">
             <header>
-                <a href="/../../index.html" class="logo">
+              <a href="/../../index.html" class="logo">
                 <img src="/../../Images/Home-Repair-Logo-6.png" alt="">
                 <span class="nav-bar">Home Repair</span>
-                </a>
-                <div class=" Search-Bar">
-                <div class="search_wrap search_wrap_1">
-                    <div class="search_box">
-                        <input type="text" id="myInput" class="input" onkeyup="Search_Function()" placeholder="search...">
-                        <div class="btn btn_common">
-                            <i class="fas fa-solid fa-magnifying-glass"></i>
+              </a>
+              <nav class="buttons">
+                <ul>
+                  <div class=" Search-Bar">
+                    <div class="search_wrap search_wrap_1">
+                        <div class="search_box">
+                            <input type="text" id="myInput" class="input" onsubmit="Search_Function()" placeholder="search...">
+                            <div id="toggleButton" class="btn btn_common">
+                                <i class="fas fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div id="toggleButton" class="btn-2 btn_common-2">
+                              <i class="fas fa-solid fa-magnifying-glass"></i>
+                              <button onclick="searchAndOpen()"></button>
+                          </div>
                         </div>
                     </div>
                 </div>
-            </div>
-                <nav>
-                <ul>
-                    <li class="dropdown">
-                    <a href="#">Account<p>Login/Signup <i class="fa-sharp fa-solid fa-caret-down"></i></p></a>
-                    <div class="dropdown-content">
-                        <form>
-                        <input type="text" id="username" placeholder="Username">
-                        <input type="password" id="password" placeholder="Password">
-                        </form>
-                        <div class="options">
-                        <a href="/signup">Signup</a>
-                        <span class="separator">|</span>
-                        <a href="/forgot-password">Forgot Password</a>
-                        </div>
-                    </div>
-                    </li>
+                   
                 </ul>
-                </nav>
+              </nav>
+            </header> 
+          </div>
+                
             </header> 
             </div>
             <div class="Tab-1">
-
+                <h1 class="title">Outlet Repair</h1>
+                <img src="outlet.jpg" alt="">
+                    <ol>
+                        <li> <strong>Troubleshooting:</strong> We will help you identify the root cause of your outlet problems, whether it's a wiring issue, faulty outlet, or circuit problem.
+                        </li>
+                        <li> <strong>Outlet Repair:</strong> We have comprehensive guides on how to replace/repair the various types of outlets.
+                        </li>
+                        <li> <strong>Safety Inspections:</strong> We offer comprehensive electrical safety inspections to identify potential hazards and recommend necessary repairs to protect your home or business.
+                        </li>
+                        <li> <strong>Upgrades:</strong> If you're looking to upgrade your outlets to modern, safer models or need additional outlets installed, we can handle the job.                
+                        </li>
+                    </ol>
             </div>
 
 
@@ -100,11 +106,7 @@
                 </div>
 <!--
 
-<h1 class="title">Outlet Repair</h1>
-                <p class="intro-para">
-                    First you need to figure out what type of outlet your need.<br> 
-                    Below are a few common types you can find in your house:
-                </p>
+
 
         <div class="title-grid">
             <h2>Duplex</h2>
@@ -206,6 +208,5 @@
 
             <!-- Add your content here -->
             <script src="outlet.js"></script>
-            <script src="/../../script.js"></script>
         </body>
         </html>

@@ -7,7 +7,8 @@
             <title>Home Repair</title>
             <script src="https://kit.fontawesome.com/2197434479.js" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="styles.css"> 
-            <link rel="stylesheet" href="Page-styles.css"> 
+            <link rel="stylesheet" href="Nav.css"> 
+
         </head>
         <body>
         <!--
@@ -15,49 +16,39 @@
         -->
         <div class="NAV">
             <header>
-                <a href="index.html" class="logo">
+              <a href="index.html" class="logo">
                 <img src="Images/Home-Repair-Logo-6.png" alt="">
                 <span class="nav-bar">Home Repair</span>
-                </a>
-                <div class=" Search-Bar">
-                <div class="search_wrap search_wrap_1">
-                    <div class="search_box">
-                        <input type="text" id="myInput" class="input" onkeyup="Search_Function()" placeholder="search...">
-                        <div class="btn btn_common">
-                            <i class="fas fa-solid fa-magnifying-glass"></i>
+              </a>
+              <nav class="buttons">
+                <ul>
+                  <div class=" Search-Bar">
+                    <div class="search_wrap search_wrap_1">
+                        <div class="search_box">
+                            <input type="text" id="myInput" class="input" onsubmit="Search_Function()" placeholder="search...">
+                            <div id="toggleButton" class="btn btn_common">
+                                <i class="fas fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div id="toggleButton" class="btn-2 btn_common-2">
+                              <i class="fas fa-solid fa-magnifying-glass"></i>
+                              <button onclick="searchAndOpen()"></button>
+                          </div>
                         </div>
                     </div>
                 </div>
-            </div>
-                <nav>
-                <ul>
-                    <li class="links-nav">
+                  <li class="links-nav">
                     <a href="#home-sec">Home</a>
-                    </li>
-                    <li class="links-nav">
+                  </li>
+                  <li class="links-nav">
                     <a href="#sections-sec">Tutorials</a>
-                    </li>
-                    <li class="links-nav">
+                  </li>
+                  <li class="links-nav">
                     <a href="#about-sec">About</a>
-                    </li>
-                    <li class="dropdown">
-                    <a href="#">Account<p>Login/Signup <i class="fa-sharp fa-solid fa-caret-down"></i></p></a>
-                    <div class="dropdown-content">
-                        <form>
-                        <input type="text" id="username" placeholder="Username">
-                        <input type="password" id="password" placeholder="Password">
-                        </form>
-                        <div class="options">
-                        <a href="/signup">Signup</a>
-                        <span class="separator">|</span>
-                        <a href="/forgot-password">Forgot Password</a>
-                        </div>
-                    </div>
-                    </li>
+                  </li>    
                 </ul>
-                </nav>
+              </nav>
             </header> 
-            </div>
+          </div>
 
         <!--
             Nav Menu
@@ -73,6 +64,5 @@
 
             <!-- Add your content here -->
             <script src="script.js"></script>
-            <script src="newPage.js"></script>
         </body>
         </html>

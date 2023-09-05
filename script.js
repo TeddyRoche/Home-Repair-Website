@@ -71,11 +71,11 @@ const sectionNames = [
     "Floor/Ceiling", "Heat/AC",  "About"
 ];
 const GridPages = {
-    Electric: ['outlet'],
-    Plumbing: [],
-    Walls: [],
-    'Floor/Ceiling': [],
-    'Heat/AC': [],
+    Electric: ['outlet', 'light-fixture', 'hot-water-heater'],
+    Plumbing: ['clogged-sink', 'leaking-pipe', 'clogged-toilet'],
+    Walls: ['hole-in-the-wall', 'hanging-picture', 'building-wall'],
+    'Floor/Ceiling': ['ceiling-fan', 'wood-floor-install'],
+    'Heat/AC': ['replace-filter'],
 
 };
 
@@ -169,7 +169,10 @@ sectionNames.forEach(sectionName => {
             spanItem.classList.add(`${i}`);
 
             const link = document.createElement('a');
-            link.href = `WebPages/${i}/${i}.html?item=${i}`;
+
+            //link.href = `WebPages/${i}/${i}.html?item=${i}`;
+            link.href = `Page.html?item=${i}`;
+
             link.appendChild(spanItem);
 
             gridItem.appendChild(link);
